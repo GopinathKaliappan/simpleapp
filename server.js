@@ -18,7 +18,69 @@ let app = express();
 
 var https = require('https');
 
+  const tabs = [
+    {
+        name: 'India',
+        url: 'https://www.news18.com/rss/india.xml',
+        icon: '',
+        color: '#FF5733',
+        text: 'white',
+        channel: 'News18',
+        category: 'India',
+        url: '/images/news18.png'
+    },
+    {
+        name: 'Word',
+        url: 'https://www.news18.com/rss/world.xml',
+        icon: '',
+        color: '#C70039',
+        text: 'white',
+        channel: 'News18',
+        category: 'World',
+        url: '/images/news18.png'
+    },
+    {
+        name: 'Cricket',
+        url: 'https://www.news18.com/rss/cricketnext.xml',
+        icon: '',
+        color: '#900C3F',
+        text: 'white',
+        channel: 'News18',
+        category: 'Cricket',
+        url: '/images/news18.png'
+    },
 
+    {
+        name: 'Life Style',
+        url: 'https://www.news18.com/rss/lifestyle.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        channel: 'News18',
+        category: 'Life_style',
+        url: '/images/news18.png'
+    },
+    {
+        name: 'Fashion',
+        url: 'https://www.thehindu.com/life-and-style/fashion/feeder/default.rss',
+        icon: '',
+        color: '#4A235A',
+        text: 'white',
+        channel: 'News18',
+        category: 'Fashion',
+        url: '/images/news18.png'
+    },
+    {
+        name: '',
+        url: 'https://www.news18.com/rss/movies.xml',
+        icon: '',
+        color: '#FF5733',
+        text: 'white',
+        channel: 'News18',
+        category: 'Movies',
+        url: '/images/news18.png'        
+    },
+  ];
 
 
 app.get('/', (request, response) => {
@@ -48,4 +110,9 @@ app.get('/', (request, response) => {
       });
 
   }).listen(PORT, () => console.log(`Listening on ${PORT}`));
+  
+app.get('/tabs:type', (request, response) => {
+    
+
+}).listen(PORT, () => console.log(`Listening on ${PORT}`));
   
