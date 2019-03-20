@@ -111,6 +111,7 @@ app.get('/', (request, response) => {
       var data;
       var req = https.get(url, function(res) {
       var count = request.query.count;  
+      var page = request.query.page;  
 
         // Buffer the body entirely for processing as a whole.
         var bodyChunks = [];
@@ -122,8 +123,8 @@ app.get('/', (request, response) => {
 
           data = body;
           var result = convert.xml2json(data, {compact: true, spaces: 4});
-          response.end(result.splice(page * count , count));
-          // ...and/or process the entire body here.
+          response.end(result);
+
         })
       });
 
