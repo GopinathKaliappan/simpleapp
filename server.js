@@ -28,11 +28,13 @@ var https = require('https');
         url: 'https://www.news18.com/rss/india.xml',
         icon: '',
         color: 'purple',
+        channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
         text: 'white',
         type: '_cdata' ,
         channel: 'News18',
         language:'engish',
-        category: 'india'
+        category: 'lifestyle',
+        id: 1
     },
     {
         name: 'World',
@@ -42,8 +44,10 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'News18',
+           channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
         language:'engish',
-        category: 'world'
+        category: 'world',
+        id: 2
     },
     {
         name: 'Cricket',
@@ -53,8 +57,10 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'News18',
+        channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
         language:'engish',
-        category: 'cricet'
+        category: 'cricet',
+        id: 3
     },
 
     {
@@ -65,19 +71,23 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'News18',
+        channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
         language:'engish',
-        category: 'lifestyle'
+        category: 'lifestyle',
+        id: 4
     },
     {
-        name: 'Fashion',
+        name: 'Business',
         url: 'https://www.huffpost.com/section/business/feed',
         icon: '',
         color: '#4A235A',
         text: 'white',
         type: '_cdata',
         channel: 'Huffington Post',
+        channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
         language:'engish',
-        category: 'business'
+        category: 'business',
+        id: 5
     },
     {
         name: 'Movies',
@@ -87,8 +97,10 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'News18',
+        channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
         language:'engish',
-        category: 'movies'
+        category: 'movies',
+        id: 6
     }
   ];
   // const tabs = [
