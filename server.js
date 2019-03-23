@@ -22,17 +22,17 @@ let app = express();
 
 var https = require('https');
 
-  const tabs = [
+    const tabs = [
     {
         name: 'India',
         url: 'https://www.news18.com/rss/india.xml',
         icon: '',
-        color: '#FF5733',
+        color: 'purple',
         text: 'white',
+        type: '_cdata' ,
         channel: 'News18',
-        category: 'India',
-        url: '/images/news18.png',
-        language: 'English'
+        language:'engish',
+        category: 'india'
     },
     {
         name: 'World',
@@ -40,10 +40,10 @@ var https = require('https');
         icon: '',
         color: '#C70039',
         text: 'white',
+        type: '_cdata',
         channel: 'News18',
-        category: 'World',
-        url: '/images/news18.png',
-        language: 'English'
+        language:'engish',
+        category: 'world'
     },
     {
         name: 'Cricket',
@@ -51,10 +51,10 @@ var https = require('https');
         icon: '',
         color: '#900C3F',
         text: 'white',
+        type: '_cdata',
         channel: 'News18',
-        category: 'Cricket',
-        url: '/images/news18.png',
-        language: 'English'
+        language:'engish',
+        category: 'cricet'
     },
 
     {
@@ -63,34 +63,103 @@ var https = require('https');
         icon: '',
         color: '#922B21',
         text: 'white',
+        type: '_cdata',
         channel: 'News18',
-        category: 'Life_style',
-        url: '/images/news18.png',
-        language: 'English'
+        language:'engish',
+        category: 'lifestyle'
     },
     {
         name: 'Fashion',
-        url: 'https://www.thehindu.com/life-and-style/fashion/feeder/default.rss',
+        url: 'https://www.huffpost.com/section/business/feed',
         icon: '',
         color: '#4A235A',
         text: 'white',
-        channel: 'News18',
-        category: 'Fashion',
-        url: '/images/news18.png',
-        language: 'English'
+        type: '_cdata',
+        channel: 'Huffington Post',
+        language:'engish',
+        category: 'business'
     },
     {
-        name: '',
+        name: 'Movies',
         url: 'https://www.news18.com/rss/movies.xml',
         icon: '',
-        color: '#FF5733',
+        color: 'grey',
         text: 'white',
+        type: '_cdata',
         channel: 'News18',
-        category: 'Movies',
-        url: '/images/news18.png',
-        language: 'English'        
-    },
+        language:'engish',
+        category: 'movies'
+    }
   ];
+  // const tabs = [
+  //   {
+  //       name: 'India',
+  //       url: 'https://www.news18.com/rss/india.xml',
+  //       icon: '',
+  //       color: '#FF5733',
+  //       text: 'white',
+  //       channel: 'News18',
+  //       category: 'India',
+  //       url: '/images/news18.png',
+  //       language: 'English'
+  //   },
+  //   {
+  //       name: 'World',
+  //       url: 'https://www.news18.com/rss/world.xml',
+  //       icon: '',
+  //       color: '#C70039',
+  //       text: 'white',
+  //       channel: 'News18',
+  //       category: 'World',
+  //       url: '/images/news18.png',
+  //       language: 'English'
+  //   },
+  //   {
+  //       name: 'Cricket',
+  //       url: 'https://www.news18.com/rss/cricketnext.xml',
+  //       icon: '',
+  //       color: '#900C3F',
+  //       text: 'white',
+  //       channel: 'News18',
+  //       category: 'Cricket',
+  //       url: '/images/news18.png',
+  //       language: 'English'
+  //   },
+
+  //   {
+  //       name: 'Life Style',
+  //       url: 'https://www.news18.com/rss/lifestyle.xml',
+  //       icon: '',
+  //       color: '#922B21',
+  //       text: 'white',
+  //       channel: 'News18',
+  //       category: 'Life_style',
+  //       url: '/images/news18.png',
+  //       language: 'English'
+  //   },
+  //   {
+  //       name: 'Fashion',
+  //       url: 'https://www.thehindu.com/life-and-style/fashion/feeder/default.rss',
+  //       icon: '',
+  //       color: '#4A235A',
+  //       text: 'white',
+  //       channel: 'News18',
+  //       category: 'Fashion',
+  //       url: '/images/news18.png',
+  //       language: 'English'
+  //   },
+  //   {
+  //       name: '',
+  //       url: 'https://www.news18.com/rss/movies.xml',
+  //       icon: '',
+  //       color: '#FF5733',
+  //       text: 'white',
+  //       channel: 'News18',
+  //       category: 'Movies',
+  //       url: '/images/news18.png',
+  //       language: 'English'        
+  //   },
+  // ];
 app.all('/', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
@@ -123,7 +192,7 @@ app.get('/', (request, response) => {
 
           data = body;
           var result = convert.xml2json(data, {compact: true, spaces: 4});
-          response.end(result);
+            response.end(result);
 
         })
       });
