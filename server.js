@@ -34,7 +34,7 @@ var https = require('https');
         channel: 'News18',
         language:'engish',
         category: 'lifestyle',
-        id: 1
+        id: 30
     },
     {
         name: 'World',
@@ -47,7 +47,7 @@ var https = require('https');
            channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
         language:'engish',
         category: 'world',
-        id: 2
+        id: 31
     },
     {
         name: 'Cricket',
@@ -60,7 +60,7 @@ var https = require('https');
         channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
         language:'engish',
         category: 'cricet',
-        id: 3
+        id: 32
     },
 
     {
@@ -74,7 +74,7 @@ var https = require('https');
         channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
         language:'engish',
         category: 'lifestyle',
-        id: 4
+        id: 33
     },
     {
         name: 'Business',
@@ -87,7 +87,7 @@ var https = require('https');
         channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
         language:'engish',
         category: 'business',
-        id: 5
+        id: 34
     },
     {
         name: 'Movies',
@@ -100,7 +100,7 @@ var https = require('https');
         channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
         language:'engish',
         category: 'movies',
-        id: 6
+        id: 35
     }
   ];
   // const tabs = [
