@@ -100,7 +100,7 @@ var https = require('https');
         channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
         language:'engish',
         category: 'movies',
-        id: 35
+        id: 35    
     }
   ];
   // const tabs = [
