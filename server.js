@@ -22,7 +22,7 @@ let app = express();
 
 var https = require('https');
 
-    const tabs = [
+    const tabs = [    
     {
         name: 'India',
         url: 'https://www.news18.com/rss/india.xml',
@@ -101,6 +101,18 @@ var https = require('https');
         language:'engish',
         category: 'movies',
         id: 35    
+    },{
+        name: 'One India',
+        url: 'https://tamil.oneindia.com/rss/tamil-art-culture-fb.xml',
+        icon: '',
+        color: 'grey',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'http://feeds.feedburner.com/Puthiyathalaimurai_India_News?format=xml',
+        language:'engish',
+        category: 'movies',
+        id: 36   
     }
   ];
   // const tabs = [
