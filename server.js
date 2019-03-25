@@ -127,7 +127,7 @@ var https = require('https');
         id: 37   
     },{
         name: 'Dinamalar அரசியல் செய்திகள்',
-        url: 'view-source:http://rss.dinamalar.com/?cat=pot1',
+        url: 'http://rss.dinamalar.com/?cat=pot1',
         icon: '',
         color: 'purple',
         text: 'white',
@@ -151,7 +151,7 @@ var https = require('https');
         id: 38   
     },{
         name: 'Dinamalar சினிமா செய்திகள்',
-        url: 'view-source:http://rss.dinamalar.com/tamilnadunews.asp',
+        url: 'http://rss.dinamalar.com/tamilnadunews.asp',
         icon: '',
         color: 'brown',
         text: 'white',
@@ -163,7 +163,7 @@ var https = require('https');
         id: 39   
     },{
         name: 'Dinamalar விளையாட்டு செய்திகள்',
-        url: 'view-source:https://sports.dinamalar.com/rss/',
+        url: 'https://sports.dinamalar.com/rss/',
         icon: '',
         color: 'brown',
         text: 'white',
@@ -172,10 +172,10 @@ var https = require('https');
         channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
         language:'engish',
         category: 'movies',
-        id: 39   
+        id: 40   
     },{
         name: 'Dinamalar Football',
-        url: 'view-source:https://sports.dinamalar.com/rss/Football',
+        url: 'https://sports.dinamalar.com/rss/Football',
         icon: '',
         color: 'brown',
         text: 'white',
@@ -184,7 +184,7 @@ var https = require('https');
         channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
         language:'engish',
         category: 'movies',
-        id: 39   
+        id: 41   
     }
   ];
   // const tabs = [
