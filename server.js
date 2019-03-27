@@ -22,7 +22,48 @@ let app = express();
 
 var https = require('https');
 
+    const liveTabs = [
+      {
+        name: 'Google News',
+        url: 'https://news.google.com/?hl=ta&gl=IN&ceid=IN%3Ata',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://s3.amazonaws.com/images.seroundtable.com/t-google-news-1303475542.jpg',
+        text: 'white',
+        type: '_cdata' ,
+        channel: 'News18',
+        language:'tamil',
+        category: 'lifestyle',
+        id: 101
+      },
+      {
+        name: 'One India',
+        url: 'https://tamil.oneindia.com/',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://prnews.io/content/platform/3729/logo.jpeg?1551272829',
+        text: 'white',
+        type: '_cdata' ,
+        channel: 'News18',
+        language:'engish',
+        category: 'lifestyle',
+        id: 101
+      },
+    ]
     const tabs = [    
+    {
+        name: 'Live Updates',
+        url: 'https://www.news18.com/rss/india.xml',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
+        text: 'white',
+        type: '_cdata' ,
+        channel: 'News18',
+        language:'engish',
+        category: 'lifestyle',
+        id: 100
+    },
     {
         name: 'India',
         url: 'https://www.news18.com/rss/india.xml',
@@ -264,6 +305,10 @@ app.all('/', function(req, res, next) {
 
 app.get('/tabs', (request, response) => {
     response.send(tabs);
+
+});
+app.get('/livetabs', (request, response) => {
+    response.send(liveTabs);
 
 });
 app.get('/tabsbycategory', (request, response) => {
