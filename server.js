@@ -49,6 +49,45 @@ var https = require('https');
         category: 'lifestyle',
         id: 101
       },
+      {
+        name: 'Thina Thandhi',
+        url: 'https://www.dailythanthi.com/',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://www.dailythanthi.com/Content/images/DT-Logo-Old.png',
+        text: 'white',
+        type: '_cdata' ,
+        channel: 'News18',
+        language:'engish',
+        category: 'lifestyle',
+        id: 103
+      },
+      {
+        name: 'Thina Malar',
+        url: 'https://www.dinamalar.com/',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://stat.dinamalar.com/new/images/dmrenglishlogonew.png',
+        text: 'white',
+        type: '_cdata' ,
+        channel: 'News18',
+        language:'engish',
+        category: 'lifestyle',
+        id: 103
+      },
+      {
+        name: 'Samayam',
+        url: 'https://tamil.samayam.com/',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://tamil.samayam.com/photo/66586409.cms',
+        text: 'white',
+        type: '_cdata' ,
+        channel: 'News18',
+        language:'engish',
+        category: 'lifestyle',
+        id: 103
+      }
     ]
     const tabs = [    
     {
