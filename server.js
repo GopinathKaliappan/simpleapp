@@ -90,19 +90,19 @@ var https = require('https');
       }
     ];
     const tabs = [
-    {
-        name: 'Live Updates',
-        url: 'https://www.news18.com/rss/india.xml',
-        icon: '',
-        color: 'green',
-        channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
-        text: 'white',
-        type: '_cdata' ,
-        channel: 'menu',
-        language:'engish',
-        category: 'lifestyle',
-        id: 100
-    },
+    // {
+    //     name: 'Live Updates',
+    //     url: 'https://www.news18.com/rss/india.xml',
+    //     icon: '',
+    //     color: 'green',
+    //     channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
+    //     text: 'white',
+    //     type: '_cdata' ,
+    //     channel: 'menu',
+    //     language:'engish',
+    //     category: 'lifestyle',
+    //     id: 100
+    // },
     {
         name: 'India',
         url: 'https://www.news18.com/rss/india.xml',
