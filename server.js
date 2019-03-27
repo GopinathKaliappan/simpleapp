@@ -91,19 +91,6 @@ var https = require('https');
     ];
     const tabs = [
     {
-        name: 'Add Channel',
-        url: 'https://agaramnews.herokuapp.com/tabs',
-        icon: '',
-        color: 'purple',
-        channelImage: 'https://s3.amazonaws.com/images.seroundtable.com/t-google-news-1303475542.jpg',
-        text: 'white',
-        type: '_cdata' ,
-        channel: 'menu',
-        language:'tamil',
-        category: 'lifestyle',
-        id: 1000
-    },    
-    {
         name: 'Live Updates',
         url: 'https://www.news18.com/rss/india.xml',
         icon: '',
