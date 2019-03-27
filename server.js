@@ -98,7 +98,7 @@ var https = require('https');
         channelImage: 'https://s3.amazonaws.com/images.seroundtable.com/t-google-news-1303475542.jpg',
         text: 'white',
         type: '_cdata' ,
-        channel: 'add_channel',
+        channel: 'menu',
         language:'tamil',
         category: 'lifestyle',
         id: 1000
@@ -111,7 +111,7 @@ var https = require('https');
         channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
         text: 'white',
         type: '_cdata' ,
-        channel: 'News18',
+        channel: 'menu',
         language:'engish',
         category: 'lifestyle',
         id: 100
