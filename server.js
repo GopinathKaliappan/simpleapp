@@ -45,7 +45,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata' ,
         channel: 'News18',
-        language:'engish',
+        language:'tamil',
         category: 'lifestyle',
         id: 102
       },
@@ -58,7 +58,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata' ,
         channel: 'News18',
-        language:'engish',
+        language:'tamil',
         category: 'lifestyle',
         id: 103
       },
@@ -67,11 +67,11 @@ var https = require('https');
         url: 'https://www.dinamalar.com/',
         icon: '',
         color: 'green',
-        channelImage: 'https://stat.dinamalar.com/new/images/dmrenglishlogonew.png',
+        channelImage: 'https://www.ecell-iitkgp.org/img/media/Dinamalar%20Logo_lineart.jpg',
         text: 'white',
         type: '_cdata' ,
         channel: 'News18',
-        language:'engish',
+        language:'tamil',
         category: 'lifestyle',
         id: 104
       },
@@ -84,7 +84,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata' ,
         channel: 'News18',
-        language:'engish',
+        language:'tamil',
         category: 'lifestyle',
         id: 105
       }
