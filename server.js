@@ -47,7 +47,7 @@ var https = require('https');
         channel: 'News18',
         language:'engish',
         category: 'lifestyle',
-        id: 101
+        id: 102
       },
       {
         name: 'Thina Thandhi',
@@ -73,7 +73,7 @@ var https = require('https');
         channel: 'News18',
         language:'engish',
         category: 'lifestyle',
-        id: 103
+        id: 104
       },
       {
         name: 'Samayam',
@@ -86,9 +86,9 @@ var https = require('https');
         channel: 'News18',
         language:'engish',
         category: 'lifestyle',
-        id: 103
+        id: 105
       }
-    ]
+    ];
     const tabs = [    
     {
         name: 'Live Updates',
