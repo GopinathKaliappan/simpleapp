@@ -94,7 +94,7 @@ var https = require('https');
         name: 'Add Channel',
         url: 'https://agaramnews.herokuapp.com/tabs',
         icon: '',
-        color: 'green',
+        color: 'purple',
         channelImage: 'https://s3.amazonaws.com/images.seroundtable.com/t-google-news-1303475542.jpg',
         text: 'white',
         type: '_cdata' ,
