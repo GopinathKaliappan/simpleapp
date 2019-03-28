@@ -189,13 +189,13 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'News18',
-        channelImage: 'http://feeds.feedburner.com/Puthiyathalaimurai_India_News?format=xml',
+        channelImage: 'https://feeds.feedburner.com/Puthiyathalaimurai_India_News?format=xml',
         language:'engish',
         category: 'movies',
         id: 36   
     },{
         name: 'Dinamalar Frontpage',
-        url: 'view-source:feeds.feedburner.com/dinamalar/Front_page_news',
+        url: 'https://feeds.feedburner.com/dinamalar/Front_page_news',
         icon: '',
         color: 'grey',
         text: 'white',
@@ -207,7 +207,7 @@ var https = require('https');
         id: 37   
     },{
         name: 'Dinamalar அரசியல் செய்திகள்',
-        url: 'http://rss.dinamalar.com/?cat=pot1',
+        url: 'https://rss.dinamalar.com/?cat=pot1',
         icon: '',
         color: 'purple',
         text: 'white',
@@ -219,7 +219,7 @@ var https = require('https');
         id: 37   
     },{
         name: 'Dinamalar சம்பவங்கள்',
-        url: 'http://rss.dinamalar.com/?cat=sam1',
+        url: 'https://rss.dinamalar.com/?cat=sam1',
         icon: '',
         color: 'orange',
         text: 'white',
@@ -231,7 +231,7 @@ var https = require('https');
         id: 38   
     },{
         name: 'Dinamalar சினிமா செய்திகள்',
-        url: 'http://rss.dinamalar.com/tamilnadunews.asp',
+        url: 'https://rss.dinamalar.com/tamilnadunews.asp',
         icon: '',
         color: 'brown',
         text: 'white',
@@ -372,7 +372,11 @@ app.get('/', (request, response) => {
 
           data = body;
           var result = convert.xml2json(data, {compact: true, spaces: 4});
-            response.end(result);
+          let item = JSON.parse(result).rss.channel.item;
+          // var buf = new Buffer(item);
+          let latestItems = item.splice(0, 40);
+          console.log(latestItems.length);  
+          response.send(latestItems);
 
         })
       });

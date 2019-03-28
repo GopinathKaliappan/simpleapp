@@ -5,8 +5,9 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.16.4",
-    "https": "^1.0.0",
     "http": "^0.0.0",
+    "https": "^1.0.0",
+    "request": "^2.88.0",
     "rss-parser": "^3.7.0",
     "xml-js": "^1.6.11"
   },
