@@ -139,6 +139,45 @@ var https = require('https');
         category: 'news',
         id: 109
       },
+      {
+        name: 'Fox News',
+        url: 'https://www.foxnews.com/',
+        icon: '',
+        color: 'green',
+        channelImage: 'http://shootcutdeliver.com/wp-content/uploads/2013/06/fox_news_logo_a_l3.png',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'CNN',
+        language:'english',
+        category: 'news',
+        id: 109
+      },
+      {
+        name: 'BBC News',
+        url: 'https://www.bbc.com/news',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://www.pngkey.com/png/detail/222-2228618_bbc-logo-remake-by-minderiayoutuber-on-deviant-bbc.png',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'BBC',
+        language:'english',
+        category: 'news',
+        id: 110
+      },
+      {
+        name: 'SKY News',
+        url: 'https://news.sky.com/',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://www.pngkey.com/png/detail/222-2228618_bbc-logo-remake-by-minderiayoutuber-on-deviant-bbc.png',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'BBC',
+        language:'english',
+        category: 'news',
+        id: 110
+      },    
     ];
     const tabs = [
 
@@ -147,7 +186,7 @@ var https = require('https');
         url: 'https://www.news18.com/rss/india.xml',
         icon: '',
         color: 'purple',
-        channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
+        channelImage: 'http://www.network18online.com/images/News18Networklogowithwhiteoutline.png',
         text: 'white',
         type: '_cdata' ,
         channel: 'News18',
@@ -163,7 +202,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'News18',
-           channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
+           channelImage: 'http://www.network18online.com/images/News18Networklogowithwhiteoutline.png',
         language:'english',
         category: 'world',
         id: 31
@@ -176,7 +215,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'News18',
-        channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
+        channelImage: 'http://www.network18online.com/images/News18Networklogowithwhiteoutline.png',
         language:'english',
         category: 'cricet',
         id: 32
@@ -190,7 +229,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'News18',
-        channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
+        channelImage: 'http://www.network18online.com/images/News18Networklogowithwhiteoutline.png',
         language:'english',
         category: 'lifestyle',
         id: 33
@@ -216,7 +255,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'News18',
-        channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
+        channelImage: 'http://www.network18online.com/images/News18Networklogowithwhiteoutline.png',
         language:'english',
         category: 'movies',
         id: 35    
@@ -227,7 +266,7 @@ var https = require('https');
         color: 'grey',
         text: 'white',
         type: '_cdata',
-        channel: 'News18',
+        channel: 'OneIndia',
         channelImage: 'https://feeds.feedburner.com/Puthiyathalaimurai_India_News?format=xml',
         language:'tamil',
         category: 'movies',
@@ -239,7 +278,7 @@ var https = require('https');
         color: 'brown',
         text: 'white',
         type: '_cdata',
-        channel: 'News18',
+        channel: 'OneIndia',
         channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
         language:'tamil',
         category: 'culture',
@@ -251,7 +290,7 @@ var https = require('https');
         color: 'brown',
         text: 'white',
         type: '_cdata',
-        channel: 'News18',
+        channel: 'OneIndia',
         channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
         language:'tamil',
         category: 'jokes',
@@ -263,7 +302,7 @@ var https = require('https');
         color: 'brown',
         text: 'white',
         type: '_cdata',
-        channel: 'News18',
+        channel: 'OneIndia',
         channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
         language:'tamil',
         category: 'jokes',
@@ -275,7 +314,7 @@ var https = require('https');
         color: 'brown',
         text: 'white',
         type: '_cdata',
-        channel: 'News18',
+        channel: 'OneIndia',
         channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
         language:'tamil',
         category: 'jokes',
@@ -287,7 +326,7 @@ var https = require('https');
         color: 'brown',
         text: 'white',
         type: '_cdata',
-        channel: 'News18',
+        channel: 'OneIndia',
         channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
         language:'tamil',
         category: 'jokes',
@@ -299,9 +338,9 @@ var https = require('https');
         color: 'brown',
         text: 'white',
         type: '_cdata',
-        channel: 'News18',
+        channel: 'Huffington Post',
         channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
-        language:'tamil',
+        language:'english',
         category: 'jokes',
         id: 44  
     },{
@@ -313,7 +352,7 @@ var https = require('https');
         type: '_cdata',
         channel: 'Huffington Post',
         channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
-        language:'tamil',
+        language:'english',
         category: 'jokes',
         id: 45  
     },{
@@ -325,7 +364,7 @@ var https = require('https');
         type: '_cdata',
         channel: 'Huffington Post',
         channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
-        language:'tamil',
+        language:'english',
         category: 'homeandliving',
         id: 46  
     },{
@@ -337,7 +376,7 @@ var https = require('https');
         type: '_cdata',
         channel: 'Huffington Post',
         channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
-        language:'tamil',
+        language:'english',
         category: 'Travel',
         id: 47  
     },{
@@ -349,7 +388,7 @@ var https = require('https');
         type: '_cdata',
         channel: 'Huffington Post',
         channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
-        language:'tamil',
+        language:'english',
         category: 'Travel',
         id: 48  
     },{
@@ -361,7 +400,7 @@ var https = require('https');
         type: '_cdata',
         channel: 'Huffington Post',
         channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
-        language:'tamil',
+        language:'english',
         category: 'Travel',
         id: 49
     },{
@@ -373,7 +412,7 @@ var https = require('https');
         type: '_cdata',
         channel: 'Huffington Post',
         channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
-        language:'tamil',
+        language:'english',
         category: 'Travel',
         id: 49
     }
