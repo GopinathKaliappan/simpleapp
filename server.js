@@ -126,7 +126,19 @@ var https = require('https');
         language:'tamil',
         category: 'lifestyle',
         id: 108
-      }
+      },{
+        name: 'Fox News',
+        url: 'https://www.foxnews.com/',
+        icon: '',
+        color: 'green',
+        channelImage: 'http://shootcutdeliver.com/wp-content/uploads/2013/06/fox_news_logo_a_l3.png',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'CNN',
+        language:'english',
+        category: 'news',
+        id: 109
+      },
     ];
     const tabs = [
 
@@ -221,78 +233,6 @@ var https = require('https');
         category: 'movies',
         id: 36   
     },{
-        name: 'Dinamalar Frontpage',
-        url: 'https://feeds.feedburner.com/dinamalar/Front_page_news',
-        icon: '',
-        color: 'grey',
-        text: 'white',
-        type: '_cdata',
-        channel: 'News18',
-        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
-        language:'tamil',
-        category: 'movies',
-        id: 37   
-    },{
-        name: 'Dinamalar அரசியல்',
-        url: 'https://rss.dinamalar.com/?cat=pot1',
-        icon: '',
-        color: 'purple',
-        text: 'white',
-        type: '_cdata',
-        channel: 'News18',
-        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
-        language:'tamil',
-        category: 'movies',
-        id: 37   
-    },{
-        name: 'Dinamalar incidents',
-        url: 'https://rss.dinamalar.com/?cat=sam1',
-        icon: '',
-        color: 'orange',
-        text: 'white',
-        type: '_cdata',
-        channel: 'News18',
-        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
-        language:'tamil',
-        category: 'movies',
-        id: 38   
-    },{
-        name: 'Dinamalar சினிமா',
-        url: 'https://rss.dinamalar.com/tamilnadunews.asp',
-        icon: '',
-        color: 'brown',
-        text: 'white',
-        type: '_cdata',
-        channel: 'News18',
-        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
-        language:'tamil',
-        category: 'movies',
-        id: 39   
-    },{
-        name: 'Dinamalar விளையாட்டு',
-        url: 'https://sports.dinamalar.com/rss/',
-        icon: '',
-        color: 'brown',
-        text: 'white',
-        type: '_cdata',
-        channel: 'News18',
-        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
-        language:'tamil',
-        category: 'movies',
-        id: 40   
-    },{
-        name: 'Dinamalar Football',
-        url: 'https://sports.dinamalar.com/rss/Football',
-        icon: '',
-        color: 'brown',
-        text: 'white',
-        type: '_cdata',
-        channel: 'News18',
-        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
-        language:'tamil',
-        category: 'movies',
-        id: 41   
-    },{
         name: 'One India Culture',
         url: 'https://tamil.oneindia.com/rss/tamil-art-culture-fb.xml',
         icon: '',
@@ -303,7 +243,7 @@ var https = require('https');
         channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
         language:'tamil',
         category: 'culture',
-        id: 42   
+        id: 43   
     },{
         name: 'OneIndia Jokes',
         url: 'https://tamil.oneindia.com/rss/tamil-jokes-fb.xml',
@@ -352,7 +292,91 @@ var https = require('https');
         language:'tamil',
         category: 'jokes',
         id: 43   
-    },
+    },{
+        name: 'Huffington Post Comedy',
+        url: 'https://www.huffpost.com/section/comedy/feed',
+        icon: '',
+        color: 'brown',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
+        language:'tamil',
+        category: 'jokes',
+        id: 44  
+    },{
+        name: 'Huff Comedy',
+        url: 'https://www.huffpost.com/section/comedy/feed',
+        icon: '',
+        color: 'brown',
+        text: 'white',
+        type: '_cdata',
+        channel: 'Huffington Post',
+        channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
+        language:'tamil',
+        category: 'jokes',
+        id: 45  
+    },{
+        name: 'Home and Living',
+        url: 'https://www.huffpost.com/section/huffpost-home/feed',
+        icon: '',
+        color: 'brown',
+        text: 'white',
+        type: '_cdata',
+        channel: 'Huffington Post',
+        channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
+        language:'tamil',
+        category: 'homeandliving',
+        id: 46  
+    },{
+        name: 'Travel',
+        url: 'https://www.huffpost.com/section/travel/feed',
+        icon: '',
+        color: 'brown',
+        text: 'white',
+        type: '_cdata',
+        channel: 'Huffington Post',
+        channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
+        language:'tamil',
+        category: 'Travel',
+        id: 47  
+    },{
+        name: 'Women',
+        url: 'https://www.huffpost.com/section/women/feed',
+        icon: '',
+        color: 'brown',
+        text: 'white',
+        type: '_cdata',
+        channel: 'Huffington Post',
+        channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
+        language:'tamil',
+        category: 'Travel',
+        id: 48  
+    },{
+        name: 'Entertainment',
+        url: 'https://www.huffpost.com/entertainment/',
+        icon: '',
+        color: 'brown',
+        text: 'white',
+        type: '_cdata',
+        channel: 'Huffington Post',
+        channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
+        language:'tamil',
+        category: 'Travel',
+        id: 49
+    },{
+        name: 'World Huffington',
+        url: 'https://www.huffpost.com/section/world-news/feed',
+        icon: '',
+        color: 'brown',
+        text: 'white',
+        type: '_cdata',
+        channel: 'Huffington Post',
+        channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
+        language:'tamil',
+        category: 'Travel',
+        id: 49
+    }
   ];
   // const tabs = [
   //   {
