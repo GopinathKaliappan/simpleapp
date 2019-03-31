@@ -29,7 +29,7 @@ var https = require('https');
         icon: '',
         color: 'green',
         channelImage: 'https://s3.amazonaws.com/images.seroundtable.com/t-google-news-1303475542.jpg',
-        text: 'white',
+        text: 'white',    
         type: '_cdata' ,
         channel: 'News18',
         language:'tamil',
@@ -99,7 +99,7 @@ var https = require('https');
     //     text: 'white',
     //     type: '_cdata' ,
     //     channel: 'menu',
-    //     language:'engish',
+    //     language:'english',
     //     category: 'lifestyle',
     //     id: 100
     // },
@@ -112,7 +112,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata' ,
         channel: 'News18',
-        language:'engish',
+        language:'english',
         category: 'lifestyle',
         id: 30
     },
@@ -125,7 +125,7 @@ var https = require('https');
         type: '_cdata',
         channel: 'News18',
            channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
-        language:'engish',
+        language:'english',
         category: 'world',
         id: 31
     },
@@ -138,7 +138,7 @@ var https = require('https');
         type: '_cdata',
         channel: 'News18',
         channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
-        language:'engish',
+        language:'english',
         category: 'cricet',
         id: 32
     },
@@ -152,7 +152,7 @@ var https = require('https');
         type: '_cdata',
         channel: 'News18',
         channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
-        language:'engish',
+        language:'english',
         category: 'lifestyle',
         id: 33
     },
@@ -165,7 +165,7 @@ var https = require('https');
         type: '_cdata',
         channel: 'Huffington Post',
         channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
-        language:'engish',
+        language:'english',
         category: 'business',
         id: 34
     },
@@ -178,7 +178,7 @@ var https = require('https');
         type: '_cdata',
         channel: 'News18',
         channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
-        language:'engish',
+        language:'english',
         category: 'movies',
         id: 35    
     },{
@@ -190,7 +190,7 @@ var https = require('https');
         type: '_cdata',
         channel: 'News18',
         channelImage: 'https://feeds.feedburner.com/Puthiyathalaimurai_India_News?format=xml',
-        language:'engish',
+        language:'tamil',
         category: 'movies',
         id: 36   
     },{
@@ -202,11 +202,11 @@ var https = require('https');
         type: '_cdata',
         channel: 'News18',
         channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
-        language:'engish',
+        language:'tamil',
         category: 'movies',
         id: 37   
     },{
-        name: 'Dinamalar அரசியல் செய்திகள்',
+        name: 'Dinamalar அரசியல்',
         url: 'https://rss.dinamalar.com/?cat=pot1',
         icon: '',
         color: 'purple',
@@ -214,11 +214,11 @@ var https = require('https');
         type: '_cdata',
         channel: 'News18',
         channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
-        language:'engish',
+        language:'tamil',
         category: 'movies',
         id: 37   
     },{
-        name: 'Dinamalar சம்பவங்கள்',
+        name: 'Dinamalar incidents',
         url: 'https://rss.dinamalar.com/?cat=sam1',
         icon: '',
         color: 'orange',
@@ -226,11 +226,11 @@ var https = require('https');
         type: '_cdata',
         channel: 'News18',
         channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
-        language:'engish',
+        language:'tamil',
         category: 'movies',
         id: 38   
     },{
-        name: 'Dinamalar சினிமா செய்திகள்',
+        name: 'Dinamalar சினிமா',
         url: 'https://rss.dinamalar.com/tamilnadunews.asp',
         icon: '',
         color: 'brown',
@@ -238,11 +238,11 @@ var https = require('https');
         type: '_cdata',
         channel: 'News18',
         channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
-        language:'engish',
+        language:'tamil',
         category: 'movies',
         id: 39   
     },{
-        name: 'Dinamalar விளையாட்டு செய்திகள்',
+        name: 'Dinamalar விளையாட்டு',
         url: 'https://sports.dinamalar.com/rss/',
         icon: '',
         color: 'brown',
@@ -250,7 +250,7 @@ var https = require('https');
         type: '_cdata',
         channel: 'News18',
         channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
-        language:'engish',
+        language:'tamil',
         category: 'movies',
         id: 40   
     },{
@@ -262,7 +262,7 @@ var https = require('https');
         type: '_cdata',
         channel: 'News18',
         channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
-        language:'engish',
+        language:'tamil',
         category: 'movies',
         id: 41   
     }
@@ -343,13 +343,18 @@ app.all('/', function(req, res, next) {
  });
 
 app.get('/tabs', (request, response) => {
-    response.send(tabs);
+    var language = request.query.language;
+    let newTabs = tabs.filter(tab => tab.language.toLowerCase() === language.toLowerCase());
+    response.send(newTabs);
 
 });
+
 app.get('/livetabs', (request, response) => {
-    response.send(liveTabs);
-
+    var language = request.query.language;
+    let newTabs = liveTabs.filter(tab => tab.language.toLowerCase() === language.toLowerCase());
+    response.send(newTabs);
 });
+
 app.get('/tabsbycategory', (request, response) => {
     let newTabs = tabs.filter(tab => tab[request.query.key].toLowerCase() === request.query.category.toLowerCase());
     response.send(newTabs);
