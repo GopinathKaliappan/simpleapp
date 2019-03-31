@@ -37,6 +37,45 @@ var https = require('https');
         id: 101
       },
       {
+        name: 'BBC Tamil',
+        url: 'https://www.bbc.com/tamil',
+        icon: '',
+        color: 'green',
+        channelImage: 'http://fmradios.in/wp-content/uploads/2015/07/BBC-Tamil-News-Radio-Live-Streaming-Online.jpg',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'BBC',
+        language:'tamil',
+        category: 'lifestyle',
+        id: 102
+      },
+      {
+        name: 'Puthiyathalaimurai',
+        url: 'http://www.puthiyathalaimurai.com/',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://enabled.in/wp/wp-content/uploads/2016/09/Puthiya-Thalaimurai-Tv-Online_200x90.png',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'BBC',
+        language:'tamil',
+        category: 'lifestyle',
+        id: 103
+      },
+      {
+        name: 'Puthiyathalaimurai',
+        url: 'http://www.puthiyathalaimurai.com/',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://enabled.in/wp/wp-content/uploads/2016/09/Puthiya-Thalaimurai-Tv-Online_200x90.png',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'BBC',
+        language:'tamil',
+        category: 'lifestyle',
+        id: 104
+      },
+      {
         name: 'One India',
         url: 'https://tamil.oneindia.com/',
         icon: '',
@@ -47,7 +86,7 @@ var https = require('https');
         channel: 'News18',
         language:'tamil',
         category: 'lifestyle',
-        id: 102
+        id: 105
       },
       {
         name: 'Thina Thandhi',
@@ -60,7 +99,7 @@ var https = require('https');
         channel: 'News18',
         language:'tamil',
         category: 'lifestyle',
-        id: 103
+        id: 106
       },
       {
         name: 'Thina Malar',
@@ -73,7 +112,7 @@ var https = require('https');
         channel: 'News18',
         language:'tamil',
         category: 'lifestyle',
-        id: 104
+        id: 107
       },
       {
         name: 'Samayam',
@@ -86,23 +125,11 @@ var https = require('https');
         channel: 'News18',
         language:'tamil',
         category: 'lifestyle',
-        id: 105
+        id: 108
       }
     ];
     const tabs = [
-    // {
-    //     name: 'Live Updates',
-    //     url: 'https://www.news18.com/rss/india.xml',
-    //     icon: '',
-    //     color: 'green',
-    //     channelImage: 'https://images-na.ssl-images-amazon.com/images/I/41glolYSKtL._SY355_.png',
-    //     text: 'white',
-    //     type: '_cdata' ,
-    //     channel: 'menu',
-    //     language:'english',
-    //     category: 'lifestyle',
-    //     id: 100
-    // },
+
     {
         name: 'India',
         url: 'https://www.news18.com/rss/india.xml',
@@ -265,7 +292,67 @@ var https = require('https');
         language:'tamil',
         category: 'movies',
         id: 41   
-    }
+    },{
+        name: 'One India Culture',
+        url: 'https://tamil.oneindia.com/rss/tamil-art-culture-fb.xml',
+        icon: '',
+        color: 'brown',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
+        language:'tamil',
+        category: 'culture',
+        id: 42   
+    },{
+        name: 'OneIndia Jokes',
+        url: 'https://tamil.oneindia.com/rss/tamil-jokes-fb.xml',
+        icon: '',
+        color: 'brown',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
+        language:'tamil',
+        category: 'jokes',
+        id: 43   
+    },{
+        name: 'OneIndia Motivational',
+        url: 'https://tamil.oneindia.com/rss/tamil-motivational-stories-fb.xml',
+        icon: '',
+        color: 'brown',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
+        language:'tamil',
+        category: 'jokes',
+        id: 43   
+    },{
+        name: 'OneIndia News',
+        url: 'https://tamil.oneindia.com/rss/tamil-news-fb.xml',
+        icon: '',
+        color: 'brown',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
+        language:'tamil',
+        category: 'jokes',
+        id: 43   
+    },{
+        name: 'OneIndia Jobs',
+        url: 'https://tamil.oneindia.com/rss/tamil-jobs-fb.xml',
+        icon: '',
+        color: 'brown',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
+        language:'tamil',
+        category: 'jokes',
+        id: 43   
+    },
   ];
   // const tabs = [
   //   {
