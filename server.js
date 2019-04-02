@@ -122,23 +122,23 @@ var https = require('https');
         channelImage: 'http://shootcutdeliver.com/wp-content/uploads/2013/06/fox_news_logo_a_l3.png',
         text: 'white',    
         type: '_cdata' ,
-        channel: 'CNN',
+        channel: 'Fox',
         language:'english',
         category: 'news',
         id: 109
       },
       {
-        name: 'Fox News',
-        url: 'https://www.foxnews.com/',
+        name: 'CNN News',
+        url: 'https://edition.cnn.com/',
         icon: '',
         color: 'green',
-        channelImage: 'http://shootcutdeliver.com/wp-content/uploads/2013/06/fox_news_logo_a_l3.png',
+        channelImage: 'https://cdn.cnn.com/cnn/.e/img/3.0/global/misc/cnn-logo.png',
         text: 'white',    
         type: '_cdata' ,
         channel: 'CNN',
         language:'english',
         category: 'news',
-        id: 109
+        id: 110
       },
       {
         name: 'BBC News',
@@ -151,20 +151,33 @@ var https = require('https');
         channel: 'BBC',
         language:'english',
         category: 'news',
-        id: 110
+        id: 111
       },
       {
         name: 'SKY News',
         url: 'https://news.sky.com/',
         icon: '',
         color: 'green',
-        channelImage: 'https://www.pngkey.com/png/detail/222-2228618_bbc-logo-remake-by-minderiayoutuber-on-deviant-bbc.png',
+        channelImage: 'https://upload.wikimedia.org/wikipedia/commons/b/b4/Sky-news-logo.png',
         text: 'white',    
         type: '_cdata' ,
         channel: 'BBC',
         language:'english',
         category: 'news',
-        id: 110
+        id: 112
+      },
+      {
+        name: 'Google News',
+        url: 'https://news.google.co.in/',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://s3.amazonaws.com/images.seroundtable.com/t-google-news-1303475542.jpg',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'Google',
+        language:'english',
+        category: 'news',
+        id: 113
       },    
     ];
     const tabs = [
@@ -316,18 +329,6 @@ var https = require('https');
         category: 'Travel',
         id: 51  
     },{
-        name: 'Entertainment',
-        url: 'https://www.huffpost.com/entertainment/',
-        icon: '',
-        color: 'brown',
-        text: 'white',
-        type: '_cdata',
-        channel: 'Huffington Post',
-        channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
-        language:'english',
-        category: 'Travel',
-        id: 51
-    },{
         name: 'World Huffington',
         url: 'https://www.huffpost.com/section/world-news/feed',
         icon: '',
@@ -366,20 +367,6 @@ var https = require('https');
         category: 'world',
         id: 31
     },
-    {
-        name: 'Cricket',
-        url: 'https://www.news18.com/rss/cricketnext.xml',
-        icon: '',
-        color: '#900C3F',
-        text: 'white',
-        type: '_cdata',
-        channel: 'News18',
-        channelImage: 'http://www.network18online.com/images/News18Networklogowithwhiteoutline.png',
-        language:'english',
-        category: 'cricet',
-        id: 32
-    },
-
     {
         name: 'Life Style',
         url: 'https://www.news18.com/rss/lifestyle.xml',
