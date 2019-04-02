@@ -178,6 +178,31 @@ var https = require('https');
         language:'english',
         category: 'news',
         id: 113
+      },
+      {
+        name: 'MSNBC',
+        url: 'https://www.msnbc.com/',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://media3.s-nbcnews.com/i/assets/msnbc-color-square-dvt.png',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'MSNBC',
+        language:'english',
+        category: 'news',
+        id: 114
+      }, {
+        name: 'Euro News',
+        url: 'https://www.euronews.com/',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://static.euronews.com/articles/332964/880x495_332964.jpg',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'Euronews',
+        language:'english',
+        category: 'news',
+        id: 115
       },    
     ];
     const tabs = [
