@@ -402,7 +402,7 @@ var http = require('http');
         text: 'white',
         type: '_cdata',
         channel: 'News18',
-        channelImage: 'life_style',
+        channelImage: 'lifestyle',
         language:'english',
         category: 'lifestyle',
         id: 33
