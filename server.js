@@ -1,7 +1,7 @@
 const express = require('express');
 const Parser = require('rss-parser');
 const convert = require('xml-js');
-
+const path = require('path');
 
 process.on('uncaughtException', function (err) {
   console.error(err);
@@ -19,8 +19,10 @@ const FEED_LIST = [
 ];
 
 let app = express();
+app.use(express.static(path.join(__dirname, 'public')));
 
 var https = require('https');
+var http = require('http');
 
     const liveTabs = [
       {
@@ -216,7 +218,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'Huffington Post',
-        channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
+        channelImage: 'business',
         language:'english',
         category: 'business',
         id: 34
@@ -229,7 +231,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'News18',
-        channelImage: 'http://www.network18online.com/images/News18Networklogowithwhiteoutline.png',
+        channelImage: 'movies',
         language:'english',
         category: 'movies',
         id: 35    
@@ -241,7 +243,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'OneIndia',
-        channelImage: 'https://feeds.feedburner.com/Puthiyathalaimurai_India_News?format=xml',
+        channelImage: 'india',
         language:'tamil',
         category: 'movies',
         id: 36   
@@ -253,7 +255,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'OneIndia',
-        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
+        channelImage: 'culture',
         language:'tamil',
         category: 'culture',
         id: 43   
@@ -265,7 +267,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'OneIndia',
-        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
+        channelImage: 'tcomedy',
         language:'tamil',
         category: 'jokes',
         id: 44   
@@ -277,7 +279,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'OneIndia',
-        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
+        channelImage: 'motivational',
         language:'tamil',
         category: 'jokes',
         id: 45   
@@ -289,7 +291,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'OneIndia',
-        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
+        channelImage: 'news',
         language:'tamil',
         category: 'jokes',
         id: 46   
@@ -301,7 +303,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'OneIndia',
-        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
+        channelImage: 'jobs',
         language:'tamil',
         category: 'jokes',
         id: 47   
@@ -313,7 +315,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'Huffington Post',
-        channelImage: 'https://releaseadvt.com/paper_image/2017.10.06_09-52-14dinamalar-LOGO.png',
+        channelImage: 'jokes',
         language:'english',
         category: 'jokes',
         id: 48  
@@ -325,7 +327,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'Huffington Post',
-        channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
+        channelImage: 'homeandliving',
         language:'english',
         category: 'homeandliving',
         id: 49  
@@ -337,7 +339,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'Huffington Post',
-        channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
+        channelImage: 'travel',
         language:'english',
         category: 'Travel',
         id: 50  
@@ -349,7 +351,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'Huffington Post',
-        channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
+        channelImage: 'women',
         language:'english',
         category: 'Travel',
         id: 51  
@@ -361,7 +363,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'Huffington Post',
-        channelImage: 'https://keratoconusinserts.com/wp-content/uploads/revslider/janbbwsite/press-logo-huffington-post.png',
+        channelImage: 'world',
         language:'english',
         category: 'Travel',
         id: 53
@@ -371,7 +373,7 @@ var https = require('https');
         url: 'https://www.news18.com/rss/india.xml',
         icon: '',
         color: 'purple',
-        channelImage: 'http://www.network18online.com/images/News18Networklogowithwhiteoutline.png',
+        channelImage: 'india',
         text: 'white',
         type: '_cdata' ,
         channel: 'News18',
@@ -387,7 +389,7 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'News18',
-           channelImage: 'http://www.network18online.com/images/News18Networklogowithwhiteoutline.png',
+           channelImage: 'world',
         language:'english',
         category: 'world',
         id: 31
@@ -400,86 +402,75 @@ var https = require('https');
         text: 'white',
         type: '_cdata',
         channel: 'News18',
-        channelImage: 'http://www.network18online.com/images/News18Networklogowithwhiteoutline.png',
+        channelImage: 'life_style',
         language:'english',
         category: 'lifestyle',
         id: 33
     }
   ];
-  // const tabs = [
-  //   {
-  //       name: 'India',
-  //       url: 'https://www.news18.com/rss/india.xml',
-  //       icon: '',
-  //       color: '#FF5733',
-  //       text: 'white',
-  //       channel: 'News18',
-  //       category: 'India',
-  //       url: '/images/news18.png',
-  //       language: 'English'
-  //   },
-  //   {
-  //       name: 'World',
-  //       url: 'https://www.news18.com/rss/world.xml',
-  //       icon: '',
-  //       color: '#C70039',
-  //       text: 'white',
-  //       channel: 'News18',
-  //       category: 'World',
-  //       url: '/images/news18.png',
-  //       language: 'English'
-  //   },
-  //   {
-  //       name: 'Cricket',
-  //       url: 'https://www.news18.com/rss/cricketnext.xml',
-  //       icon: '',
-  //       color: '#900C3F',
-  //       text: 'white',
-  //       channel: 'News18',
-  //       category: 'Cricket',
-  //       url: '/images/news18.png',
-  //       language: 'English'
-  //   },
 
-  //   {
-  //       name: 'Life Style',
-  //       url: 'https://www.news18.com/rss/lifestyle.xml',
-  //       icon: '',
-  //       color: '#922B21',
-  //       text: 'white',
-  //       channel: 'News18',
-  //       category: 'Life_style',
-  //       url: '/images/news18.png',
-  //       language: 'English'
-  //   },
-  //   {
-  //       name: 'Fashion',
-  //       url: 'https://www.thehindu.com/life-and-style/fashion/feeder/default.rss',
-  //       icon: '',
-  //       color: '#4A235A',
-  //       text: 'white',
-  //       channel: 'News18',
-  //       category: 'Fashion',
-  //       url: '/images/news18.png',
-  //       language: 'English'
-  //   },
-  //   {
-  //       name: '',
-  //       url: 'https://www.news18.com/rss/movies.xml',
-  //       icon: '',
-  //       color: '#FF5733',
-  //       text: 'white',
-  //       channel: 'News18',
-  //       category: 'Movies',
-  //       url: '/images/news18.png',
-  //       language: 'English'        
-  //   },
-  // ];
+
+
+
 app.all('/', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
   next();
  });
+
+http.createServer(function (request, response) {
+    console.log('request starting...');
+
+    var filePath = '.' + request.url;
+    if (filePath == './')
+        filePath = './index.html';
+
+    var extname = path.extname(filePath);
+    var contentType = 'text/html';
+    switch (extname) {
+        case '.js':
+            contentType = 'text/javascript';
+            break;
+        case '.css':
+            contentType = 'text/css';
+            break;
+        case '.json':
+            contentType = 'application/json';
+            break;
+        case '.png':
+            contentType = 'image/png';
+            break;      
+        case '.jpg':
+            contentType = 'image/jpg';
+            break;
+        case '.wav':
+            contentType = 'audio/wav';
+            break;
+    }
+
+    fs.readFile(filePath, function(error, content) {
+        if (error) {
+            if(error.code == 'ENOENT'){
+                fs.readFile('./404.html', function(error, content) {
+                    response.writeHead(200, { 'Content-Type': contentType });
+                    response.end(content, 'utf-8');
+                });
+            }
+            else {
+                response.writeHead(500);
+                response.end('Sorry, check with the site admin for error: '+error.code+' ..\n');
+                response.end(); 
+            }
+        }
+        else {
+            response.writeHead(200, { 'Content-Type': contentType });
+            response.end(content, 'utf-8');
+        }
+    });
+
+})
+
+app.use('/static', express.static('public'));
 
 app.get('/tabs', (request, response) => {
     var language = request.query.language;
