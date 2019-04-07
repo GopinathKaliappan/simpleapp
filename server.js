@@ -207,6 +207,18 @@ var http = require('http');
         id: 115
       },    
     ];
+
+
+
+    const languages = [{
+        label: 'English',
+        value: 'english',
+        id: 'english'
+    }, {
+        label: 'Tamil',
+        value: 'tamil',
+        id: 'tamil'
+    }];
     const tabs = [
 
     
@@ -487,6 +499,7 @@ app.get('/livetabs', (request, response) => {
 
 app.get('/tabsbycategory', (request, response) => {
     let newTabs = tabs.filter(tab => tab[request.query.key].toLowerCase() === request.query.category.toLowerCase());
+    newTabs[0].language = languages; 
     response.send(newTabs);
 });
 
