@@ -218,6 +218,11 @@ var http = require('http');
         label: 'Tamil',
         value: 'tamil',
         id: 'tamil'
+    },
+    , {
+        label: 'All',
+        value: 'all',
+        id: 'all'
     }];
     const tabs = [
 
@@ -486,7 +491,13 @@ app.use('/static', express.static('public'));
 
 app.get('/tabs', (request, response) => {
     var language = request.query.language;
-    let newTabs = tabs.filter(tab => tab.language.toLowerCase() === language.toLowerCase());
+    newTabs = [];
+    if(language === 'all') {
+      newTabs = tabs;  
+    } else {
+      newTabs = tabs.filter(tab => tab.language.toLowerCase() === language.toLowerCase());  
+    }
+    
     newTabs[0].languages = languages; 
     response.send(newTabs);
 
