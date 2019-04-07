@@ -214,12 +214,11 @@ var http = require('http');
         label: 'English',
         value: 'english',
         id: 'english'
-    }, {
+    },{
         label: 'Tamil',
         value: 'tamil',
         id: 'tamil'
-    },
-    , {
+    },{
         label: 'All',
         value: 'all',
         id: 'all'
