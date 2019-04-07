@@ -487,6 +487,7 @@ app.use('/static', express.static('public'));
 app.get('/tabs', (request, response) => {
     var language = request.query.language;
     let newTabs = tabs.filter(tab => tab.language.toLowerCase() === language.toLowerCase());
+    newTabs[0].languages = languages; 
     response.send(newTabs);
 
 });
@@ -499,7 +500,6 @@ app.get('/livetabs', (request, response) => {
 
 app.get('/tabsbycategory', (request, response) => {
     let newTabs = tabs.filter(tab => tab[request.query.key].toLowerCase() === request.query.category.toLowerCase());
-    newTabs[0].language = languages; 
     response.send(newTabs);
 });
 
