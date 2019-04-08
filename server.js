@@ -505,6 +505,7 @@ app.get('/tabs', (request, response) => {
 app.get('/livetabs', (request, response) => {
     var language = request.query.language;
     if(language === 'all') {
+      newTabs = liveTabs;
       newTabs[0].languages = languages;
       response.send(newTabs);  
     } else {
