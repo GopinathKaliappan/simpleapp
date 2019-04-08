@@ -504,9 +504,14 @@ app.get('/tabs', (request, response) => {
 
 app.get('/livetabs', (request, response) => {
     var language = request.query.language;
-    let newTabs = liveTabs.filter(tab => tab.language.toLowerCase() === language.toLowerCase());
-    newTabs[0].languages = languages;
-    response.send(newTabs);
+    if(language === 'all') {
+      newTabs[0].languages = languages;
+      response.send(newTabs);  
+    } else {
+      let newTabs = liveTabs.filter(tab => tab.language.toLowerCase() === language.toLowerCase());
+      newTabs[0].languages = languages;
+      response.send(newTabs);  
+    }    
 });
 
 app.get('/tabsbycategory', (request, response) => {
