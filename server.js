@@ -214,9 +214,33 @@ var http = require('http');
         text: 'white',    
         type: '_cdata' ,
         channel: 'oneindia',
-        language:'മലയാളം',
+        language:'മലയാള',
         category: 'news',
         id: 116
+      },{
+        name: 'Asianet Malayalam',
+        url: 'https://malayalam.oneindia.com/',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://static.asianetnews.com/v1/images/malyalam-new-logo.svg',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'Asianet',
+        language:'മലയാള',
+        category: 'news',
+        id: 117
+      },{
+        name: 'Asianet Malayalam',
+        url: 'https://malayalam.oneindia.com/',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://static.asianetnews.com/v1/images/malyalam-new-logo.svg',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'Asianet',
+        language:'മലയാള',
+        category: 'news',
+        id: 117
       },        
     ];
 
@@ -227,13 +251,17 @@ var http = require('http');
         value: 'english',
         id: 'english'
     },{
-        label: 'Tamil',
+        label: 'தமிழ்',
         value: 'tamil',
         id: 'tamil'
     },{
         label: 'മലയാള',
         value: 'മലയാള',
         id: 'മലയാള'
+    },{
+        label: 'हिंदी',
+        value: 'hindi',
+        id: 'hindi'
     },{
         label: 'All',
         value: 'all',
@@ -516,6 +544,191 @@ var http = require('http');
         language:'മലയാള',
         category: 'social_media',
         id: 59
+    },
+    {
+        name: 'इनोवेशन',
+        url: 'https://hindi.news18.com/rss/khabar/business/innovation.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'innovation',
+        language:'hindi',
+        category: 'इनोवेशन',
+        id: 60
+    },
+     {
+        name: 'उत्तर प्रदेश',
+        url: 'https://hindi.news18.com/rss/khabar/uttar-pradesh/uttar-pradesh.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'uttarpradesh',
+        language:'hindi',
+        category: 'उत्तर प्रदेश',
+        id: 61
+    },
+     {
+        name: 'उत्तराखंड',
+        url: 'https://hindi.news18.com/rss/khabar/uttarakhand/uttarakhand.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'uttarakhand',
+        language:'hindi',
+        category: 'उत्तर प्रदेश',
+        id: 62
+    }  , {
+        name: 'एसेसरीज़',
+        url: 'https://hindi.news18.com/rss/khabar/tech/accessories.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'accessories',
+        language:'hindi',
+        category: 'एसेसरीज़',
+        id: 63
+    } , {
+        name: 'ऑनलाइन बिज़नेस',
+        url: 'https://hindi.news18.com/rss/khabar/business/online-business.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'online_business',
+        language:'hindi',
+        category: 'ऑनलाइन बिज़नेस',
+        id: 64
+    } , {
+        name: 'करियर',
+        url: 'https://hindi.news18.com/rss/khabar/career/career-career.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'career',
+        language:'hindi',
+        category: 'करियर',
+        id: 65
+    } , {
+        name: 'कल्चर',
+        url: 'https://hindi.news18.com/rss/khabar/lifestyle/culture.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'culture_india',
+        language:'hindi',
+        category: 'कल्चर',
+        id: 66
+    } , {
+        name: 'क्राइम',
+        url: 'https://hindi.news18.com/rss/khabar/lifestyle/culture.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'culture_india',
+        language:'hindi',
+        category: 'क्राइम',
+        id: 67
+    }, {
+        name: 'क्राइम',
+        url: 'https://hindi.news18.com/rss/khabar/crime/crime.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'crime',
+        language:'hindi',
+        category: 'क्राइम',
+        id: 68
+    } , {
+        name: 'क्रिकेट',
+        url: 'https://hindi.news18.com/rss/khabar/sports/cricket.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'cricket',
+        language:'hindi',
+        category: 'क्रिकेट',
+        id: 69
+    },{
+        name: 'ट्रेंड्स',
+        url: 'https://hindi.news18.com/rss/khabar/lifestyle/trends.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'trends',
+        language:'hindi',
+        category: 'ट्रेंड्स',
+        id: 70
+    } ,{
+        name: 'पैसा बनाओ',
+        url: 'https://hindi.news18.com/rss/khabar/business/money-making-tips.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'money_making_tips',
+        language:'hindi',
+        category: 'पैसा बनाओ',
+        id: 71
+    },{
+        name: 'फ़िल्म रिव्यू',
+        url: 'https://hindi.news18.com/rss/khabar/entertainment/film-review.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'movies',
+        language:'hindi',
+        category: 'फ़िल्म रिव्यू',
+        id: 72
+    },
+    {
+        name: 'फुटबॉल',
+        url: 'https://hindi.news18.com/rss/khabar/sports/football.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'movies',
+        language:'hindi',
+        category: 'फुटबॉल',
+        id: 73
+    },
+    {
+        name: 'Bollywood',
+        url: 'https://hindi.news18.com/rss/khabar/entertainment/bollywood.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'bollywood',
+        language:'hindi',
+        category: 'Bollywood',
+        id: 74
     }
   ];
 
