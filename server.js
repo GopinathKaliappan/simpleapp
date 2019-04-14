@@ -728,7 +728,7 @@ var http = require('http');
         channel: 'vikatan',
         channelImage: 'breaking',
         language:'tamil',
-        category: 'importantnews',
+        category: 'முக்கிய செய்திகள்',
         id: 76
     },
     {
@@ -777,20 +777,7 @@ var http = require('http');
         text: 'white',
         type: '_cdata',
         channel: 'vikatan',
-        channelImage: 'spirituality',
-        language:'tamil',
-        category: 'தமிழகம்',
-        id: 80
-    },
-    {
-        name: 'தமிழகம்',
-        url: 'http://rss.vikatan.com/?cat=news_tamilnadu',
-        icon: '',
-        color: '#922B21',
-        text: 'white',
-        type: '_cdata',
-        channel: 'vikatan',
-        channelImage: 'spirituality',
+        channelImage: 'tamilnadu',
         language:'tamil',
         category: 'தமிழகம்',
         id: 80
