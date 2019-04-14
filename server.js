@@ -769,19 +769,19 @@ var http = require('http');
     //     category: 'ஆன்மிகம்',
     //     id: 79
     // },
-    //  {
-    //     name: 'தமிழகம்',
-    //     url: 'https://tamil.samayam.com/state%20news/rssfeedsection/48069549.cms',
-    //     icon: '',
-    //     color: '#922B21',
-    //     text: 'white',
-    //     type: '_cdata',
-    //     channel: 'vikatan',
-    //     channelImage: 'tamilnadu',
-    //     language:'tamil',
-    //     category: 'தமிழகம்',
-    //     id: 80
-    // }
+     ,{
+        name: 'தமிழகம்',
+        url: 'https://tamil.samayam.com/state%20news/rssfeedsection/48069549.cms',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'vikatan',
+        channelImage: 'tamilnadu',
+        language:'tamil',
+        category: 'தமிழகம்',
+        id: 80
+    }
   
   ];
 
@@ -900,7 +900,7 @@ app.get('/', (request, response) => {
           let item = JSON.parse(result).rss.channel.item;
           // var buf = new Buffer(item);
           let latestItems = item.splice(0, 40);
-          console.log(latestItems.length);  
+          // console.log(latestItems.length);  
           response.send(latestItems);
 
         })
