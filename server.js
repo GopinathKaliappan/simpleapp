@@ -717,71 +717,71 @@ var http = require('http');
         language:'hindi',
         category: 'Bollywood',
         id: 74
+    },
+    {
+        name: 'முக்கிய செய்திகள்',
+        url: 'http://rss.vikatan.com/?cat=news_imprt',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'vikatan',
+        channelImage: 'breaking',
+        language:'tamil',
+        category: 'முக்கிய செய்திகள்',
+        id: 76
+    },
+    {
+        name: 'இந்தியா',
+        url: 'http://rss.vikatan.com/?cat=news_india',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'vikatan',
+        channelImage: 'india_tamil',
+        language:'tamil',
+        category: 'இந்தியா',
+        id: 77
+    } ,{
+        name: 'அரசியல்',
+        url: 'http://rss.vikatan.com/?cat=news_politics',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'vikatan',
+        channelImage: 'politics',
+        language:'tamil',
+        category: 'அரசியல்',
+        id: 78
     }
-    // {
-    //     name: 'முக்கிய செய்திகள்',
-    //     url: 'http://rss.vikatan.com/?cat=news_imprt',
-    //     icon: '',
-    //     color: '#922B21',
-    //     text: 'white',
-    //     type: '_cdata',
-    //     channel: 'vikatan',
-    //     channelImage: 'breaking',
-    //     language:'tamil',
-    //     category: 'முக்கிய செய்திகள்',
-    //     id: 76
-    // },
-    // {
-    //     name: 'இந்தியா',
-    //     url: 'http://rss.vikatan.com/?cat=news_india',
-    //     icon: '',
-    //     color: '#922B21',
-    //     text: 'white',
-    //     type: '_cdata',
-    //     channel: 'vikatan',
-    //     channelImage: 'india_tamil',
-    //     language:'tamil',
-    //     category: 'இந்தியா',
-    //     id: 77
-    // } ,{
-    //     name: 'அரசியல்',
-    //     url: 'http://rss.vikatan.com/?cat=news_politics',
-    //     icon: '',
-    //     color: '#922B21',
-    //     text: 'white',
-    //     type: '_cdata',
-    //     channel: 'vikatan',
-    //     channelImage: 'politics',
-    //     language:'tamil',
-    //     category: 'அரசியல்',
-    //     id: 78
-    // }
-    //  ,{
-    //     name: 'ஆன்மிகம்',
-    //     url: 'http://rss.vikatan.com/?cat=news_spirituality',
-    //     icon: '',
-    //     color: '#922B21',
-    //     text: 'white',
-    //     type: '_cdata',
-    //     channel: 'vikatan',
-    //     channelImage: 'spirituality',
-    //     language:'tamil',
-    //     category: 'ஆன்மிகம்',
-    //     id: 79
-    // },
-    //  {
-    //     name: 'தமிழகம்',
-    //     url: 'http://rss.vikatan.com/?cat=news_tamilnadu',
-    //     icon: '',
-    //     color: '#922B21',
-    //     text: 'white',
-    //     type: '_cdata',
-    //     channel: 'vikatan',
-    //     channelImage: 'tamilnadu',
-    //     language:'tamil',
-    //     category: 'தமிழகம்',
-    //     id: 80
-    // }
+     ,{
+        name: 'ஆன்மிகம்',
+        url: 'http://rss.vikatan.com/?cat=news_spirituality',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'vikatan',
+        channelImage: 'spirituality',
+        language:'tamil',
+        category: 'ஆன்மிகம்',
+        id: 79
+    },
+     {
+        name: 'தமிழகம்',
+        url: 'https://tamil.samayam.com/state%20news/rssfeedsection/48069549.cms',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'vikatan',
+        channelImage: 'tamilnadu',
+        language:'tamil',
+        category: 'தமிழகம்',
+        id: 80
+    }
   ];
 
 
