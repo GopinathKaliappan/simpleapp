@@ -231,9 +231,9 @@ var http = require('http');
         value: 'tamil',
         id: 'tamil'
     },{
-        label: 'മലയാളം',
-        value: 'മലയാളം',
-        id: 'മലയാളം'
+        label: 'മലയാള',
+        value: 'മലയാള',
+        id: 'മലയാള'
     },{
         label: 'All',
         value: 'all',
