@@ -438,6 +438,84 @@ var http = require('http');
         language:'english',
         category: 'lifestyle',
         id: 33
+    },
+    {
+        name: 'Abroad',
+        url: 'https://malayalam.oneindia.com/rss/malayalam-abroad-fb.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'abroad_malayalam',
+        language:'മലയാള',
+        category: 'abroad',
+        id: 54
+    },
+    {
+        name: 'Alappuzha',
+        url: 'https://malayalam.oneindia.com/rss/malayalam-alappuzha-fb.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'alappuzha_malayalam',
+        language:'മലയാള',
+        category: 'alappuzha',
+        id: 55
+    },
+    {
+        name: 'Astroloy',
+        url: 'https://malayalam.oneindia.com/rss/malayalam-astrology-fb.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'astroloy_malayalam',
+        language:'മലയാള',
+        category: 'astroloy',
+        id: 56
+    },
+    {
+        name: 'Ernakulam',
+        url: 'https://malayalam.oneindia.com/rss/malayalam-ernakulam-fb.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'ernakulam',
+        language:'മലയാള',
+        category: 'ernakulam_malayalam',
+        id: 57
+    },
+    {
+        name: 'Womens',
+        url: 'https://malayalam.oneindia.com/rss/malayalam-women-fb.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'women',
+        language:'മലയാള',
+        category: 'malayalam_womens',
+        id: 58
+    },
+    {
+        name: 'Social Media',
+        url: 'https://malayalam.oneindia.com/rss/malayalam-social-media-fb.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'social_media',
+        language:'മലയാള',
+        category: 'social_media',
+        id: 59
     }
   ];
 
