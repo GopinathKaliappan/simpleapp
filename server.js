@@ -231,6 +231,10 @@ var http = require('http');
         value: 'tamil',
         id: 'tamil'
     },{
+        label: 'മലയാളം',
+        value: 'മലയാളം',
+        id: 'മലയാളം'
+    },{
         label: 'All',
         value: 'all',
         id: 'all'
