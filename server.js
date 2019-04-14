@@ -205,7 +205,19 @@ var http = require('http');
         language:'english',
         category: 'news',
         id: 115
-      },    
+      },{
+        name: 'OneIndia Malayalam',
+        url: 'https://malayalam.oneindia.com/',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://malayalam.oneindia.com/images/malayalam-oneindia-logo.svg',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'oneindia',
+        language:'മലയാളം',
+        category: 'news',
+        id: 116
+      },        
     ];
 
 
@@ -550,5 +562,5 @@ app.get('/', (request, response) => {
 
       });
 
-  }).listen(PORT, () => console.log(`Listening on ${PORT}`));
+      }).listen(PORT, () => console.log(`Listening on ${PORT}`));
   
