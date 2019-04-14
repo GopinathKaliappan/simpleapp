@@ -631,19 +631,7 @@ var http = require('http');
         language:'hindi',
         category: 'कल्चर',
         id: 66
-    } , {
-        name: 'क्राइम',
-        url: 'https://hindi.news18.com/rss/khabar/lifestyle/culture.xml',
-        icon: '',
-        color: '#922B21',
-        text: 'white',
-        type: '_cdata',
-        channel: 'News18',
-        channelImage: 'culture_india',
-        language:'hindi',
-        category: 'क्राइम',
-        id: 67
-    }, {
+    },{
         name: 'क्राइम',
         url: 'https://hindi.news18.com/rss/khabar/crime/crime.xml',
         icon: '',
@@ -712,7 +700,7 @@ var http = require('http');
         text: 'white',
         type: '_cdata',
         channel: 'News18',
-        channelImage: 'movies',
+        channelImage: 'football',
         language:'hindi',
         category: 'फुटबॉल',
         id: 73
