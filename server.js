@@ -244,6 +244,111 @@ var http = require('http');
       },        
     ];
 
+    const liveStream = [
+      {
+        name: 'Puthiyathalaimurai',
+        url: 'https://www.youtube.com/embed/hPY6UVVXEUY',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://agaramnews.herokuapp.com/static/channel/newen.png',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'Puthiyathalaimurai',
+        language:'tamil',
+        category: 'lifestyle',
+        id: 103
+      },
+      {
+        name: 'Sun Live',
+        url: 'https://www.youtube.com/embed/tolWDbC_2iQ',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://agaramnews.herokuapp.com/static/channel/sun.png',
+        text: 'white',
+        type: '_cdata' ,
+        channel: 'Sun News',
+        language:'tamil',
+        category: 'lifestyle',
+        id: 106
+      },
+      {
+        name: 'Polimer Tv',
+        url: 'https://www.youtube.com/embed/iV9P-K9mv6E',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://agaramnews.herokuapp.com/static/channel/polimer.png',
+        text: 'white',
+        type: '_cdata' ,
+        channel: 'Polimer',
+        language:'tamil',
+        category: 'lifestyle',
+        id: 107
+      },
+      {
+        name: 'News7',
+        url: 'https://www.youtube.com/embed/BbWPxNT1ACg',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://agaramnews.herokuapp.com/static/channel/news7.png',
+        text: 'white',
+        type: '_cdata' ,
+        channel: 'News7',
+        language:'tamil',
+        category: 'lifestyle',
+        id: 108
+      },{
+        name: 'SKY News Live',
+        url: 'https://www.youtube.com/embed/lrX6ktLg8WQ',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://agaramnews.herokuapp.com/static/channel/sky.png',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'SKY',
+        language:'english',
+        category: 'news',
+        id: 109
+      },
+      {
+        name: 'CNN News',
+        url: 'https://www.youtube.com/embed/EWgWFS0BC-U',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://agaramnews.herokuapp.com/static/channel/cnn.png',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'CNN',
+        language:'english',
+        category: 'news',
+        id: 110
+      },
+       {
+        name: 'Euro News',
+        url: 'https://www.youtube.com/embed/7t04Mv8_5sM',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://agaramnews.herokuapp.com/static/channel/euro.png',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'Euronews',
+        language:'english',
+        category: 'news',
+        id: 115
+      },{
+        name: 'Asianet Malayalam',
+        url: 'https://www.youtube.com/embed/H9mXFeGsGEE',
+        icon: '',
+        color: 'green',
+        channelImage: 'https://agaramnews.herokuapp.com/static/channel/asianet.png',
+        text: 'white',    
+        type: '_cdata' ,
+        channel: 'Asianet',
+        language:'മലയാള',
+        category: 'news',
+        id: 117
+      }        
+    ];
+
 
 
     const languages = [{
@@ -873,6 +978,20 @@ app.get('/livetabs', (request, response) => {
       response.send(newTabs);  
     }    
 });
+app.get('/live-stream', (request, response) => {
+    var language = request.query.language;
+    let newStream = [];
+    if(language === 'all') {
+      newStream = liveStream;
+      newStream[0].languages = languages;
+      response.send(newStream);  
+    } else {
+      newStream = liveStream.filter(tab => tab.language.toLowerCase() === language.toLowerCase());
+      newStream[0].languages = languages;
+      response.send(newStream);  
+    }    
+});
+
 
 app.get('/tabsbycategory', (request, response) => {
     let newTabs = tabs.filter(tab => tab[request.query.key].toLowerCase() === request.query.category.toLowerCase());
