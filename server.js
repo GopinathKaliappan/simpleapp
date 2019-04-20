@@ -334,19 +334,20 @@ var http = require('http');
         language:'english',
         category: 'news',
         id: 115
-      },{
-        name: 'Asianet Malayalam',
-        url: 'https://www.youtube.com/embed/H9mXFeGsGEE',
-        icon: '',
-        color: 'green',
-        channelImage: 'https://agaramnews.herokuapp.com/static/channel/asianet.png',
-        text: 'white',    
-        type: '_cdata' ,
-        channel: 'Asianet',
-        language:'മലയാള',
-        category: 'news',
-        id: 117
-      }        
+      }
+      // {
+      //   name: 'Asianet Malayalam',
+      //   url: 'https://www.youtube.com/embed/H9mXFeGsGEE',
+      //   icon: '',
+      //   color: 'green',
+      //   channelImage: 'https://agaramnews.herokuapp.com/static/channel/asianet.png',
+      //   text: 'white',    
+      //   type: '_cdata' ,
+      //   channel: 'Asianet',
+      //   language:'മലയാള',
+      //   category: 'news',
+      //   id: 117
+      // }        
     ];
 
 
