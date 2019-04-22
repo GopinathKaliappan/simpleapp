@@ -311,7 +311,8 @@ var http = require('http');
       },
       {
         name: 'CNN News',
-        url: 'https://www.youtube.com/embed/EWgWFS0BC-U',
+        // url: 'https://www.youtube.com/embed/EWgWFS0BC-U',
+        url: 'https://www.youtube.com/embed/7-mZ9WspnvM',
         icon: '',
         color: 'green',
         channelImage: 'https://agaramnews.herokuapp.com/static/channel/cnn.jpg',
