@@ -914,7 +914,7 @@ var http = require('http');
         id: 82
     },{
         name: 'பொது செய்திகள்',
-        url: 'http://rss.dinamalar.com/?cat=pot1',
+        url: 'https://rss.dinamalar.com/?cat=pot1',
         icon: '',
         color: '#922B21',
         text: 'white',
