@@ -888,6 +888,54 @@ var http = require('http');
         language:'tamil',
         category: 'தமிழகம்',
         id: 80
+    },{
+        name: 'முதல் பக்க செய்திகள்',
+        url: 'https://feeds.feedburner.com/dinamalar/Front_page_news',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: '',
+        channelImage: 'sunset',
+        language:'tamil',
+        category: 'முதல் பக்க செய்திகள்',
+        id: 81
+    },{
+        name: 'அரசியல் செய்திகள்',
+        url: 'https://rss.dinamalar.com/?cat=ara1',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: '',
+        channelImage: 'politics',
+        language:'tamil',
+        category: 'அரசியல் செய்திகள்',
+        id: 82
+    },{
+        name: 'பொது செய்திகள்',
+        url: 'http://rss.dinamalar.com/?cat=pot1',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: '',
+        channelImage: 'enter',
+        language:'tamil',
+        category: 'பொது செய்திகள்',
+        id: 83
+    },{
+        name: 'உலக செய்திகள்',
+        url: 'https://rss.dinamalar.com/?cat=INL1',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: '',
+        channelImage: 'world',
+        language:'tamil',
+        category: 'உலக செய்திகள்',
+        id: 84
     }
   ];
 
