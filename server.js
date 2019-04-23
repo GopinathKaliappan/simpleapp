@@ -375,7 +375,19 @@ var http = require('http');
         id: 'all'
     }];
     const tabs = [
-
+    {
+        name: 'தமிழகம்',
+        url: 'https://tamil.samayam.com/state%20news/rssfeedsection/48069549.cms',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: '',
+        channelImage: 'tamilnadu',
+        language:'tamil',
+        category: 'தமிழகம்',
+        id: 80
+    },
     
     {
         name: 'Business',
@@ -403,19 +415,19 @@ var http = require('http');
         category: 'movies',
         id: 35    
     },{
-        name: 'One India',
+        name: '1 இந்தியா',
         url: 'https://tamil.oneindia.com/rss/tamil-art-culture-fb.xml',
         icon: '',
         color: 'grey',
         text: 'white',
         type: '_cdata',
-        channel: 'OneIndia',
+        channel: '1 இந்தியா',
         channelImage: 'india',
         language:'tamil',
         category: 'movies',
         id: 36   
     },{
-        name: 'Culture',
+        name: 'கலாச்சாரம்',
         url: 'https://tamil.oneindia.com/rss/tamil-art-culture-fb.xml',
         icon: '',
         color: 'brown',
@@ -427,7 +439,7 @@ var http = require('http');
         category: 'culture',
         id: 43   
     },{
-        name: 'Jokes',
+        name: 'நகைச்சுவை',
         url: 'https://tamil.oneindia.com/rss/tamil-jokes-fb.xml',
         icon: '',
         color: 'brown',
@@ -876,31 +888,20 @@ var http = require('http');
         category: 'பெட்ரோல் & டீசல் விலை',
         id: 79
     },
+    // {
+    //     name: 'முதல் பக்க செய்திகள்',
+    //     url: 'https://feeds.feedburner.com/dinamalar/Front_page_news',
+    //     icon: '',
+    //     color: '#922B21',
+    //     text: 'white',
+    //     type: '_cdata',
+    //     channel: '',
+    //     channelImage: 'sunset',
+    //     language:'tamil',
+    //     category: 'முதல் பக்க செய்திகள்',
+    //     id: 81
+    // },
     {
-        name: 'தமிழகம்',
-        url: 'https://tamil.samayam.com/state%20news/rssfeedsection/48069549.cms',
-        icon: '',
-        color: '#922B21',
-        text: 'white',
-        type: '_cdata',
-        channel: '',
-        channelImage: 'tamilnadu',
-        language:'tamil',
-        category: 'தமிழகம்',
-        id: 80
-    },{
-        name: 'முதல் பக்க செய்திகள்',
-        url: 'https://feeds.feedburner.com/dinamalar/Front_page_news',
-        icon: '',
-        color: '#922B21',
-        text: 'white',
-        type: '_cdata',
-        channel: '',
-        channelImage: 'sunset',
-        language:'tamil',
-        category: 'முதல் பக்க செய்திகள்',
-        id: 81
-    },{
         name: 'அரசியல் செய்திகள்',
         url: 'https://rss.dinamalar.com/?cat=ara1',
         icon: '',
