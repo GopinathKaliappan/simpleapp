@@ -937,6 +937,42 @@ var http = require('http');
         language:'tamil',
         category: 'உலக செய்திகள்',
         id: 84
+    },{
+        name: '1 భారతదేశం',
+        url: 'https://telugu.oneindia.com/rss/telugu-fb.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: '',
+        channelImage: 'india',
+        language:'telugu',
+        category: '1 భారతదేశం',
+        id: 85
+    },{
+        name: '1 భారతదేశం',
+        url: 'http://telugu.oneindia.com/rss/telugu-news-fb.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: '',
+        channelImage: 'lifestyle',
+        language:'telugu',
+        category: '1 భారతదేశం',
+        id: 86
+    },{
+        name: 'భారతదేశం Today',
+        url: 'http://telugu.oneindia.com/rss/telugu-talk-of-the-day-fb.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: '',
+        channelImage: 'enter',
+        language:'telugu',
+        category: 'భారతదేశం Today',
+        id: 87
     }
   ];
 
