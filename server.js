@@ -369,6 +369,11 @@ var http = require('http');
         label: 'हिंदी',
         value: 'hindi',
         id: 'hindi'
+    },
+    {
+        label: 'తెలుగు',
+        value: 'telugu',
+        id: 'telugu'
     },{
         label: 'All',
         value: 'all',
