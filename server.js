@@ -943,16 +943,16 @@ var http = require('http');
         category: 'உலக செய்திகள்',
         id: 84
     },{
-        name: '1 భారతదేశం',
-        url: 'https://telugu.oneindia.com/rss/telugu-fb.xml',
+        name: 'భారతదేశం Astroloy',
+        url: 'https://telugu.oneindia.com/rss/telugu-jyotishyam-fb.xml',
         icon: '',
         color: '#922B21',
         text: 'white',
         type: '_cdata',
         channel: '',
-        channelImage: 'india',
+        channelImage: 'astroloy_malayalam',
         language:'telugu',
-        category: '1 భారతదేశం',
+        category: 'భారతదేశం Astroloy',
         id: 85
     },{
         name: 'భారతదేశం News',
