@@ -976,10 +976,10 @@ var http = require('http');
         channel: '',
         channelImage: 'lifestyle',
         language:'telugu',
-        category: '1 భారతదేశం',
+        category: 'తెలుగు News',
         id: 86
     },{
-        name: 'భారతదేశం Today',
+        name: 'తెలుగు Today',
         url: 'https://telugu.oneindia.com/rss/telugu-talk-of-the-day-fb.xml',
         icon: '',
         color: '#922B21',
@@ -988,7 +988,7 @@ var http = require('http');
         channel: '',
         channelImage: 'enter',
         language:'telugu',
-        category: 'భారతదేశం Today',
+        category: 'తెలుగు Today',
         id: 87
     }
   ];
