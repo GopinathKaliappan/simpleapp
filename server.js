@@ -955,8 +955,8 @@ var http = require('http');
         category: '1 భారతదేశం',
         id: 85
     },{
-        name: '1 భారతదేశం',
-        url: 'http://telugu.oneindia.com/rss/telugu-news-fb.xml',
+        name: 'భారతదేశం News',
+        url: 'https://telugu.oneindia.com/rss/telugu-news-fb.xml',
         icon: '',
         color: '#922B21',
         text: 'white',
@@ -968,7 +968,7 @@ var http = require('http');
         id: 86
     },{
         name: 'భారతదేశం Today',
-        url: 'http://telugu.oneindia.com/rss/telugu-talk-of-the-day-fb.xml',
+        url: 'https://telugu.oneindia.com/rss/telugu-talk-of-the-day-fb.xml',
         icon: '',
         color: '#922B21',
         text: 'white',
