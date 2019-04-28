@@ -943,7 +943,7 @@ var http = require('http');
         category: 'உலக செய்திகள்',
         id: 84
     },{
-        name: 'భారతదేశం Astroloy',
+        name: 'తెలుగు Astroloy',
         url: 'https://telugu.oneindia.com/rss/telugu-jyotishyam-fb.xml',
         icon: '',
         color: '#922B21',
@@ -952,10 +952,22 @@ var http = require('http');
         channel: '',
         channelImage: 'astroloy_malayalam',
         language:'telugu',
-        category: 'భారతదేశం Astroloy',
+        category: 'తెలుగు Astroloy',
         id: 85
     },{
-        name: 'భారతదేశం News',
+        name: 'తెలుగు Education',
+        url: 'https://www.sakshieducation.com/rssEducation.aspx',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: '',
+        channelImage: 'online_business',
+        language:'telugu',
+        category: 'తెలుగు Education',
+        id: 88
+    },{
+        name: 'తెలుగు News',
         url: 'https://telugu.oneindia.com/rss/telugu-news-fb.xml',
         icon: '',
         color: '#922B21',
@@ -964,10 +976,10 @@ var http = require('http');
         channel: '',
         channelImage: 'lifestyle',
         language:'telugu',
-        category: '1 భారతదేశం',
+        category: '1 తెలుగు',
         id: 86
     },{
-        name: 'భారతదేశం Today',
+        name: 'తెలుగు Today',
         url: 'https://telugu.oneindia.com/rss/telugu-talk-of-the-day-fb.xml',
         icon: '',
         color: '#922B21',
@@ -976,9 +988,22 @@ var http = require('http');
         channel: '',
         channelImage: 'enter',
         language:'telugu',
-        category: 'భారతదేశం Today',
+        category: 'తెలుగు Today',
         id: 87
     }
+    // },{
+    //     name: 'భారతదేశం Today',
+    //     url: 'https://telugu.oneindia.com/rss/telugu-talk-of-the-day-fb.xml',
+    //     icon: '',
+    //     color: '#922B21',
+    //     text: 'white',
+    //     type: '_cdata',
+    //     channel: '',
+    //     channelImage: 'enter',
+    //     language:'telugu',
+    //     category: 'భారతదేశం Today',
+    //     id: 89
+    // }
   ];
 
 
