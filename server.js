@@ -954,19 +954,21 @@ var http = require('http');
         language:'telugu',
         category: 'తెలుగు Astroloy',
         id: 85
-    },{
-        name: 'తెలుగు Education',
-        url: 'https://www.sakshieducation.com/rssEducation.aspx',
-        icon: '',
-        color: '#922B21',
-        text: 'white',
-        type: '_cdata',
-        channel: '',
-        channelImage: 'online_business',
-        language:'telugu',
-        category: 'తెలుగు Education',
-        id: 88
-    },{
+    },
+    // {
+    //     name: 'తెలుగు Education',
+    //     url: 'https://www.sakshieducation.com/rssEducation.aspx',
+    //     icon: '',
+    //     color: '#922B21',
+    //     text: 'white',
+    //     type: '_cdata',
+    //     channel: '',
+    //     channelImage: 'online_business',
+    //     language:'telugu',
+    //     category: 'తెలుగు Education',
+    //     id: 88
+    // },
+    {
         name: 'తెలుగు News',
         url: 'https://telugu.oneindia.com/rss/telugu-news-fb.xml',
         icon: '',
