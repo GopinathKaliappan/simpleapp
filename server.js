@@ -990,20 +990,19 @@ var http = require('http');
         language:'telugu',
         category: 'తెలుగు Today',
         id: 87
+    },{
+        name: 'ఆంధ్రప్రదేశ్',
+        url: 'http://rss.andhrajyothy.com/RssFeed.aspx?SupId=19&SubId=0',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: '',
+        channelImage: 'enter',
+        language:'telugu',
+        category: 'ఆంధ్రప్రదేశ్',
+        id: 89
     }
-    // },{
-    //     name: 'భారతదేశం Today',
-    //     url: 'https://telugu.oneindia.com/rss/telugu-talk-of-the-day-fb.xml',
-    //     icon: '',
-    //     color: '#922B21',
-    //     text: 'white',
-    //     type: '_cdata',
-    //     channel: '',
-    //     channelImage: 'enter',
-    //     language:'telugu',
-    //     category: 'భారతదేశం Today',
-    //     id: 89
-    // }
   ];
 
 
