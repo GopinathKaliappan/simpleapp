@@ -976,10 +976,10 @@ var http = require('http');
         channel: '',
         channelImage: 'lifestyle',
         language:'telugu',
-        category: '1 తెలుగు',
+        category: '1 భారతదేశం',
         id: 86
     },{
-        name: 'తెలుగు Today',
+        name: 'భారతదేశం Today',
         url: 'https://telugu.oneindia.com/rss/telugu-talk-of-the-day-fb.xml',
         icon: '',
         color: '#922B21',
@@ -988,20 +988,8 @@ var http = require('http');
         channel: '',
         channelImage: 'enter',
         language:'telugu',
-        category: 'తెలుగు Today',
+        category: 'భారతదేశం Today',
         id: 87
-    },{
-        name: 'ఆంధ్రప్రదేశ్',
-        url: 'https://rss.andhrajyothy.com/RssFeed.aspx?SupId=19&SubId=0',
-        icon: '',
-        color: '#922B21',
-        text: 'white',
-        type: '_cdata',
-        channel: '',
-        channelImage: 'enter',
-        language:'telugu',
-        category: 'ఆంధ్రప్రదేశ్',
-        id: 89
     }
   ];
 
