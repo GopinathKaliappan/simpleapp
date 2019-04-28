@@ -992,7 +992,7 @@ var http = require('http');
         id: 87
     },{
         name: 'ఆంధ్రప్రదేశ్',
-        url: 'http://rss.andhrajyothy.com/RssFeed.aspx?SupId=19&SubId=0',
+        url: 'https://rss.andhrajyothy.com/RssFeed.aspx?SupId=19&SubId=0',
         icon: '',
         color: '#922B21',
         text: 'white',
