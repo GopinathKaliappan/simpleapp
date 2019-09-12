@@ -2,6 +2,33 @@ const express = require('express');
 const Parser = require('rss-parser');
 const convert = require('xml-js');
 const path = require('path');
+const mongoose = require('mongoose');
+ 
+const Schema = mongoose.Schema;
+const ObjectId = Schema.ObjectId;
+ 
+
+// mongoose.connect('mongodb://vicky:king$vicky1@ds159998.mlab.com:59998/jjj', {useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb://king:Gopi$vicky1@ds159998.mlab.com:59998/jjj', {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
+mongoose.connect('mongodb://Gopinath:Gopi$vicky1@ds027896.mlab.com:27896/jjj', {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
+
+const Tabs = new Schema({
+  name: String,
+  url: String,
+  color: String,
+  type: String,
+  channel: String,
+  channelImage: String,
+  language: String,
+  category: String,
+  id: Number
+});
+
+const MyModel = mongoose.model('Tabs', Tabs);
+
+
+
+
 
 process.on('uncaughtException', function (err) {
   console.error(err);
@@ -21,6 +48,18 @@ const FEED_LIST = [
 let app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.get('/tabsdata', async(request, response) => {
+    var language = request.query.language;
+    let data = [];
+    MyModel.find({ language: language }, await function (err, docs) {
+            data = docs;
+            response.send(data);
+  // console.log(docs.toString("utf8"));
+    });
+    
+
+});
 var https = require('https');
 var http = require('http');
 
