@@ -3,36 +3,47 @@ const Parser = require('rss-parser');
 const convert = require('xml-js');
 const path = require('path');
 const mongoose = require('mongoose');
- 
+const rp = require('request-promise');
+
+// Page Scrapper
+var fs = require('fs');
+var request = require('request');
+var cheerio = require('cheerio');
+
+const scrape = require('website-scraper');
+
+
+
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
  
 
 // mongoose.connect('mongodb://vicky:king$vicky1@ds159998.mlab.com:59998/jjj', {useNewUrlParser: true, useUnifiedTopology: true });
 // mongoose.connect('mongodb://king:Gopi$vicky1@ds159998.mlab.com:59998/jjj', {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
-mongoose.connect('mongodb://Gopinath:Gopi$vicky1@ds027896.mlab.com:27896/jjj', {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
+// mongoose.connect('mongodb://Gopinath:Gopi$vicky1@ds027896.mlab.com:27896/jjj', {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
 
-const Tabs = new Schema({
-  name: String,
-  url: String,
-  color: String,
-  type: String,
-  channel: String,
-  channelImage: String,
-  language: String,
-  category: String,
-  id: Number
-});
+// const Tabs = new Schema({
+//   name: String,
+//   url: String,
+//   color: String,
+//   type: String,
+//   channel: String,
+//   channelImage: String,
+//   language: String,
+//   category: String,
+//   id: Number
+// });
 
-const MyModel = mongoose.model('Tabs', Tabs);
+// const MyModel = mongoose.model('Tabs', Tabs);
+
 
 
 
 
 
 process.on('uncaughtException', function (err) {
-  console.error(err);
-  console.log("Node NOT Exiting...");
+  // console.error(err);
+  
 });
 // const PORT = process.env.PORT || 5000;
 const PORT = process.env.PORT || 3000;
@@ -49,6 +60,64 @@ let app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+
+
+
+app.get('/axios-scrape', function(req,res) {
+
+    const axios = require('axios');
+    const cheerio = require('cheerio');
+
+    const url = req.query.url;
+    // console.log(url);    
+
+    axios(url)
+      .then(response => {
+        const html = response.data;
+        const $ = cheerio.load(html)
+        const statsTable = $('.statsTableContainer > tr');
+        const topPremierLeagueScorers = [];
+        const headers = [];
+        const titleHeader = $('h1' );
+        const description = $('#article_body' ).text();
+        const images = $('img');
+        const metas = $('p');
+        const meta = [];
+        const imgs = [];
+        // res.send(titleHeader);
+        // const title = $('.post-full-title');
+        titleHeader.each(function() {
+                const tit = $(this).text();
+                headers.push({tit});
+        })     
+        metas.each(function() {
+            const ii = $(this).text();
+            meta.push(ii);                         
+        })
+        images.each(function(){
+            let imgURl = $(this).attr('src');
+            imgs.push(imgURl);
+        })
+
+        statsTable.each(function () {
+          const rank = $(this).find('.rank > strong').text();
+          const playerName = $(this).find('.playerName > strong').text();
+          const nationality = $(this).find('.playerCountry').text();
+          const goals = $(this).find('.mainStat').text();
+
+          topPremierLeagueScorers.push({
+            rank,
+            name: playerName,
+            nationality,
+            goals,
+          });
+        });
+
+        res.send({headers, description, meta});
+      })
+      .catch(console.error);
+});
+
 app.get('/tabsdata', async(request, response) => {
     var language = request.query.language;
     let data = [];
@@ -56,10 +125,68 @@ app.get('/tabsdata', async(request, response) => {
             data = docs;
             response.send(data);
   // console.log(docs.toString("utf8"));
+    });    
+});
+
+// const options = {
+//   url: `https://tamil.oneindia.com/news/chennai/subasri-death-issue-ex-aiadmk-councilor-escaped-362912.html`,
+//   transform: function (body) {
+//     return cheerio.load(body);
+//   }
+// };
+
+app.get('/scrape', async function(req, res){
+
+//       const axios = require('axios');
+
+//     const url = 'https://www.premierleague.com/stats/top/players/goals?se=-1&cl=-1&iso=-1&po=-1?se=-1';
+// app.get('/gethtml', async(request, response) => {
+//     axios(url)
+//       .then(response => {
+//         const html = response.data;
+//         res.send(html);
+//       })
+//       .catch(console.error);
+// });
+    // rp(options)
+    // .then(function (data) {
+    //     console.log(data);
+    //     // REQUEST SUCCEEDED: DO SOMETHING
+    // })
+    // .catch(function (err) {
+    //     // REQUEST FAILED: ERROR OF SOME KIND
+    // });
+    // scrape(options).then((result)=> {
+    //    res.send(result);     
+    // });
+   var optionss = {
+    uri: 'https://tamil.oneindia.com/news/chennai/subasri-death-issue-ex-aiadmk-councilor-escaped-362912.html',
+    simple: false    //  <---  <---  <---  <---
+};
+ 
+
+
+rp(optionss)
+    .then(await function (body) {
+          res.send(body);
+          // console.log('afd sdffgdsfd sdf 100');
+          data = body;
+          var result = convert.xml2json(data, {compact: true, spaces: 4});
+          // let item = JSON.parse(result).rss.channel.item;
+          // var buf = new Buffer(item);
+          // let latestItems = item.splice(0, 40);
+          // console.log(latestItems.length);  
+          res.send(res);
+        // Request succeeded but might as well be a 404
+        // Usually combined with resolveWithFullResponse = true to check response.statusCode
+    })
+    .catch(function (err) {
+        // console.log(err);
+        // console.log('afd sdffgdsfd sdf err');
+        // Request failed due to technical reasons...
     });
     
-
-});
+})
 var https = require('https');
 var http = require('http');
 
@@ -1044,7 +1171,7 @@ app.all('/', function(req, res, next) {
  });
 
 http.createServer(function (request, response) {
-    console.log('request starting...');
+    // console.log('request starting...');
 
     var filePath = '.' + request.url;
     if (filePath == './')
