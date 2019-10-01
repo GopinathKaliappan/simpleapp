@@ -17,7 +17,9 @@ const scrape = require('website-scraper');
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
  
-
+let app = express();
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/static', express.static('public'));
 // mongoose.connect('mongodb://vicky:king$vicky1@ds159998.mlab.com:59998/jjj', {useNewUrlParser: true, useUnifiedTopology: true });
 // mongoose.connect('mongodb://king:Gopi$vicky1@ds159998.mlab.com:59998/jjj', {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
 // mongoose.connect('mongodb://Gopinath:Gopi$vicky1@ds027896.mlab.com:27896/jjj', {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
@@ -56,8 +58,6 @@ const FEED_LIST = [
   'http://github-trends.ryotarai.info/rss/github_trends_javascript_daily.rss'
 ];
 
-let app = express();
-app.use(express.static(path.join(__dirname, 'public')));
 
 
 
@@ -558,21 +558,7 @@ var http = require('http');
         language:'tamil',
         category: 'தமிழகம்',
         id: 80
-    },
-    
-    {
-        name: 'Business',
-        url: 'https://www.huffpost.com/section/business/feed',
-        icon: '',
-        color: '#4A235A',
-        text: 'white',
-        type: '_cdata',
-        channel: 'Huffington Post',
-        channelImage: 'business',
-        language:'english',
-        category: 'business',
-        id: 34
-    },
+    },    
     {
         name: 'Movies',
         url: 'https://www.news18.com/rss/movies.xml',
@@ -657,7 +643,96 @@ var http = require('http');
         language:'tamil',
         category: 'jokes',
         id: 47   
+    }
+     ,{
+        name: 'Nasa News',
+        url: 'https://www.nasa.gov/rss/dyn/breaking_news.rss',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: '',
+        channelImage: 'sunset',
+        language:'english',
+        category: 'Space & Research',
+        id: 88
     },{
+        name: 'Aeronautics',
+        url: 'https://www.nasa.gov/rss/dyn/aeronautics.rss',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: '',
+        channelImage: 'world',
+        language:'english',
+        category: 'Aeronautics',
+        id: 91
+    },
+    {
+        name: 'Life Style',
+        url: 'https://www.news18.com/rss/lifestyle.xml',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: 'News18',
+        channelImage: 'lifestyle',
+        language:'english',
+        category: 'lifestyle',
+        id: 33
+    },    
+    {
+        name: 'Business',
+        url: 'https://www.huffpost.com/section/business/feed',
+        icon: '',
+        color: '#4A235A',
+        text: 'white',
+        type: '_cdata',
+        channel: 'Huffington Post',
+        channelImage: 'business',
+        language:'english',
+        category: 'business',
+        id: 34
+    },
+    {
+        name: 'Space & Education',
+        url: 'https://www.nasa.gov/rss/dyn/educationnews.rss',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: '',
+        channelImage: 'innovation',
+        language:'english',
+        category: 'Space & Education',
+        id: 89
+    },{
+        name: 'Space Photography',
+        url: 'https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: '',
+        channelImage: 'sunset',
+        language:'english',
+        category: 'Space Photography',
+        id: 90
+    },{
+        name: 'ESPN',
+        url: 'https://www.espn.com/espn/rss/news',
+        icon: '',
+        color: '#922B21',
+        text: 'white',
+        type: '_cdata',
+        channel: '',
+        channelImage: 'football',
+        language:'english',
+        category: 'Sports',
+        id: 92
+    },    
+    {
         name: 'Comedy',
         url: 'https://www.huffpost.com/section/comedy/feed',
         icon: '',
@@ -669,7 +744,8 @@ var http = require('http');
         language:'english',
         category: 'jokes',
         id: 48  
-    },{
+    },    
+    {
         name: 'Home and Living',
         url: 'https://www.huffpost.com/section/huffpost-home/feed',
         icon: '',
@@ -743,19 +819,6 @@ var http = require('http');
         language:'english',
         category: 'world',
         id: 31
-    },
-    {
-        name: 'Life Style',
-        url: 'https://www.news18.com/rss/lifestyle.xml',
-        icon: '',
-        color: '#922B21',
-        text: 'white',
-        type: '_cdata',
-        channel: 'News18',
-        channelImage: 'lifestyle',
-        language:'english',
-        category: 'lifestyle',
-        id: 33
     },
     {
         name: 'Abroad',
@@ -1008,6 +1071,7 @@ var http = require('http');
         category: 'Bollywood',
         id: 74
     },
+   
     {
         name: 'முக்கிய செய்திகள்',
         url: 'https://tamil.samayam.com/rssfeedstopstories.cms',
@@ -1059,19 +1123,6 @@ var http = require('http');
         category: 'பெட்ரோல் & டீசல் விலை',
         id: 79
     },
-    // {
-    //     name: 'முதல் பக்க செய்திகள்',
-    //     url: 'https://feeds.feedburner.com/dinamalar/Front_page_news',
-    //     icon: '',
-    //     color: '#922B21',
-    //     text: 'white',
-    //     type: '_cdata',
-    //     channel: '',
-    //     channelImage: 'sunset',
-    //     language:'tamil',
-    //     category: 'முதல் பக்க செய்திகள்',
-    //     id: 81
-    // },
     {
         name: 'அரசியல் செய்திகள்',
         url: 'https://rss.dinamalar.com/?cat=ara1',
@@ -1096,7 +1147,8 @@ var http = require('http');
         language:'tamil',
         category: 'பொது செய்திகள்',
         id: 83
-    },{
+    }
+    ,{
         name: 'உலக செய்திகள்',
         url: 'https://rss.dinamalar.com/?cat=INL1',
         icon: '',
@@ -1222,7 +1274,7 @@ http.createServer(function (request, response) {
 
 })
 
-app.use('/static', express.static('public'));
+
 
 app.get('/tabs', (request, response) => {
     var language = request.query.language;
@@ -1271,6 +1323,7 @@ app.get('/tabsbycategory', (request, response) => {
 });
 
 app.get('/', (request, response) => {
+
       var url = request.query.url;
       var data;
       var req = https.get(url, function(res) {
@@ -1282,15 +1335,18 @@ app.get('/', (request, response) => {
         res.on('data', function(chunk) {
           // You can process streamed parts here...
           bodyChunks.push(chunk);
-        }).on('end', function() {
+        }).on('end', async function() {
           var body = Buffer.concat(bodyChunks);
 
           data = body;
           var result = convert.xml2json(data, {compact: true, spaces: 4});
           let item = JSON.parse(result).rss.channel.item;
           // var buf = new Buffer(item);
+
           let latestItems = item.splice(0, 40);
-          // console.log(latestItems.length);  
+
+          
+          
           response.send(latestItems);
 
         })
