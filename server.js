@@ -59,12 +59,6 @@ const FEED_LIST = [
 ];
 
 
-app.get('/add', function(req,res) {
-    res.send({
-      add: false,
-      review: false
-    });
-})
 
 
 
@@ -132,6 +126,14 @@ app.get('/tabsdata', async(request, response) => {
   // console.log(docs.toString("utf8"));
     });    
 });
+
+app.get('/add', async (req,res) => {
+    res.send({
+      add: false,
+      review: false
+    });
+})
+
 
 // const options = {
 //   url: `https://tamil.oneindia.com/news/chennai/subasri-death-issue-ex-aiadmk-councilor-escaped-362912.html`,
