@@ -59,7 +59,12 @@ const FEED_LIST = [
 ];
 
 
-
+app.get('/add', function(req,res) {
+    res.send({
+      add: false,
+      review: false
+    });
+})
 
 
 
